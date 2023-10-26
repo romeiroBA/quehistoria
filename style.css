@@ -6,8 +6,8 @@
 
 .slider{
     margin: 0 auto;
-    width: 800px;
-    height: 400px;
+    width: 1920px;
+    height: 1080px;
     overflow: hidden;
 }
 
@@ -39,7 +39,7 @@
 }
 
 .manual-btn{
-    border: 2px solid #FFF;
+    border: 2px solid #BF7F1C;
     padding: 5px;
     border-radius: 10px;
     cursor: pointer;
@@ -51,7 +51,7 @@
 }
 
 .manual-btn:hover{
-    background-color: #573142;
+    background-color: #BF7F1C;
 }
 
 #radio1:checked ~ .first{
