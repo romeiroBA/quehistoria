@@ -120,6 +120,12 @@
     .nome-conteudo {
     font-size: 20px;
     margin-top: 50%;
+    text-decoration: none;
+    color: #573142;
+    }
+
+    .nome-conteudo:hover {
+        transform: scale(1.3);
     }
 
     #logo{
