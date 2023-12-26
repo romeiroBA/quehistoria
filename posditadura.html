@@ -21,12 +21,6 @@
             display: grid;
             place-items: center;
         }
-        .conteudo{
-            background-color: white;
-            height: 1000px;
-            width: 100%;
-            border-radius: 20px;
-        }
         #titulo{
             text-align: center;
             font-family: Arial, Helvetica, sans-serif;
@@ -57,6 +51,68 @@
             margin-left: 92%;
             margin-top: 20px;
         }
+        .conteudo {
+            font-size: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+            margin-left: 30px;
+            margin-right: 30px;
+            text-align: justify;
+            text-indent: 50px;
+            line-height: 30px;
+        }
+        #subtopicos {
+            font-size: 25px;
+            font-family: Arial, Helvetica, sans-serif;
+            margin-left: 30px;
+        }
+        .imagens {
+            display: grid;
+            place-items: center;
+        }
+        #titulo{
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        #tamanhoimagem {
+            max-width: 600px;
+            max-height: 400px;
+        }
+        @media screen and (max-width: 1100px){
+            #logo{
+            width: 230px;
+            height: 80px;
+            margin-left: 20px;
+            margin-top: 20px;
+            }
+
+        #logorodapé {
+            width: 200px;
+            height: 70px;
+            margin-left: 30px;
+            margin-top: 30px;
+            }
+
+        #logoif {
+            width: 35px;
+            height: 42px;
+            margin-left: 85%;
+            margin-top: 50px;
+            }
+
+        #descricao {
+            width: 200px;
+            height: 30px;
+            text-align: justify;
+            margin-left: 32px;
+            margin-top: -10px;
+            font-size: 14px;
+            color: white;
+            }
+        #tamanhoimagem {
+            max-width: 300px;
+            max-height: 200px;
+        }
+        }
     </style>
 </head>
 <body id="body">
@@ -64,8 +120,99 @@
         <img src="imagenstcc/logo.png" id="logo">
     </div>
     <p></p>
-    <div class="conteudo">
+    <div>
         <h1 id="titulo">Pós Ditadura</h1>
+        <p class="conteudo">O Brasil pós-ditadura militar, a partir da década de 1980, é caracterizado por significativas transformações 
+            políticas, sociais e econômicas. A ditadura militar, que durou de 1964 a 1985, foi marcada por repressão política, censura, e 
+            violações dos direitos humanos. Com a redemocratização, o país passou por mudanças importantes, como a retomada das eleições diretas
+            e uma certa estabilização econômica.
+        </p>
+        <div class="imagens"><img src="imagenstcc/outrodia.jpg"></div>
+        <h2 id="subtopicos">Diretas Já</h2>
+        <p class="conteudo">O movimento "Diretas Já" influenciou a transição para a democracia, embora as eleições diretas para presidente em 
+            1984 não tenham ocorrido. A Constituição de 1988, promulgada durante o governo de José Sarney, estabeleceu os princípios democráticos
+            e os direitos fundamentais.
+        </p>
+        <p class="conteudo">Esse movimento foi crucial para a transição do país de um regime militar para a democracia, se caracterizando como 
+            uma campanha popular que mobilizou milhões de brasileiros na década de 1980, buscando a realização de eleições diretas para a 
+            presidência do Brasil. 
+        </p>
+        <div class="imagens"><img src="imagenstcc/diretasja.jpg"></div>
+        <p class="conteudo">Surgiu em um contexto de abertura política, quando o regime militar brasileiro estava sob pressão para 
+            iniciar uma transição democrática. O presidente João Figueiredo, último presidente militar, sinalizou a distensão política, 
+            permitindo a formação de partidos políticos e o retorno de exilados políticos. A mobilização foi impulsionada por uma ampla coalizão
+             de forças políticas, sociais e culturais. Diversos partidos, lideranças políticas, sindicatos, movimentos estudantis, artistas e 
+            intelectuais uniram forças em prol da causa.
+        </p>
+        <p class="conteudo">Ademais, o movimento "Diretas Já" organizou grandes comícios e manifestações em diversas cidades do Brasil. O 
+            ponto alto ocorreu em 16 de abril de 1984, quando centenas de milhares de pessoas se reuniram na Praça da Sé, em São Paulo, em um 
+            dos maiores atos públicos da história do país. A participação popular foi expressiva e diversificada, incluindo pessoas de diferentes
+            classes sociais e setores da sociedade. A campanha foi marcada por uma atmosfera de esperança e otimismo pela redemocratização.
+        </p>
+        <p class="conteudo">Além da pressão interna, o movimento recebeu apoio e atenção da comunidade internacional. Líderes mundiais e 
+            organizações de direitos humanos acompanharam de perto o desenvolvimento do processo democrático no Brasil. Embora as eleições 
+            diretas não tenham sido imediatamente alcançadas, "Diretas Já" contribuiu para a criação de um ambiente propício à redemocratização. A emenda das eleições diretas foi derrotada no Congresso, mas uma emenda que restabelecia o voto direto para governadores foi aprovada.
+        </p>
+        <p class="conteudo">Em 1985, ocorreram as primeiras eleições presidenciais indiretas após o regime militar. Tancredo Neves, candidato da
+             oposição, foi eleito presidente pelo Colégio Eleitoral. No entanto, Tancredo Neves adoeceu e faleceu antes de tomar posse, sendo 
+            sucedido por José Sarney.
+        </p>
+        <p class="conteudo">O movimento "Diretas Já" é considerado um marco histórico na luta pela redemocratização do Brasil. Mesmo não tendo 
+            alcançado seu objetivo imediato, a mobilização popular e a pressão exercida contribuíram para o estabelecimento de um ambiente 
+            democrático e para a promulgação da Constituição de 1988. Este movimento representou um capítulo fundamental na transição do Brasil 
+            para a democracia, marcando o fim do regime militar e o início de uma nova era na política brasileira.
+        </p>
+        <h2 id="subtopicos">Estabilização Econômica e Plano Real</h2>
+        <p class="conteudo">Com o fim do governo militar em 1985, a transição democrática estava em andamento, mas o país enfrentava desafios 
+            consideráveis, como inflação descontrolada e instabilidade econômica. Foi somente nos anos 1990 que uma abordagem decisiva para a 
+            estabilização econômica foi implementada. O Plano Real, lançado em 1994, foi uma iniciativa que teve um impacto transformador. Sob 
+            a liderança do então ministro da Fazenda, Fernando Henrique Cardoso, o plano visava controlar a hiperinflação que assolava o país, 
+            corroendo os salários e minando a confiança na moeda nacional.
+        </p>
+        <p class="conteudo">O Plano Real introduziu uma nova moeda, o Real, e implementou medidas como a âncora cambial, que fixava a taxa de 
+            câmbio do Real em relação ao dólar, e a criação de uma Unidade Real de Valor (URV) para auxiliar na transição. Essas medidas 
+            proporcionaram estabilidade e restauraram a confiança na economia brasileira.
+        </p>
+        <p class="conteudo">Além da dimensão econômica, o Plano Real teve implicações políticas significativas. A estabilização econômica 
+            contribuiu para consolidar o apoio popular ao governo e para pavimentar o caminho para a eleição presidencial de Fernando Henrique 
+            Cardoso em 1994. Durante seus dois mandatos presidenciais (1995-2002), Cardoso continuou a implementar políticas de estabilização 
+            econômica e promover reformas estruturais.</p>
+        <p class="conteudo">A estabilização política e econômica não apenas permitiu que o Brasil superasse a inflação descontrolada, mas também
+            estabeleceu as bases para um período de crescimento econômico mais consistente. As reformas estruturais, como a privatização de 
+            empresas estatais e a abertura econômica, foram parte integrante desse processo. A estabilidade política e econômica proporcionada 
+            pelo Plano Real e pelas políticas subsequentes foi essencial para consolidar a redemocratização e estabelecer as condições para o 
+            desenvolvimento econômico sustentável nas décadas seguintes.</p>
+        <h2 id="subtopicos">Desafios Sociais e Desigualdade</h2>
+        <p class="conteudo">A transição para a democracia não foi apenas um processo político, mas também social, e refletiu-se nas condições de
+            vida da população. A desigualdade social era e continua sendo uma característica marcante da sociedade brasileira. Durante a ditadura
+            militar, as disparidades socioeconômicas aumentaram, resultando em uma distribuição desigual de recursos, acesso à educação, saúde e 
+            oportunidades de emprego. A redemocratização trouxe à tona a necessidade de enfrentar essas disparidades e promover políticas mais 
+            inclusivas.</p>
+        <p class="conteudo">Um dos desafios mais prementes foi a melhoria das condições de vida da população mais desfavorecida. A pobreza 
+            persistente, especialmente em regiões remotas e urbanas precárias, exigiu a implementação de políticas sociais mais eficazes. 
+            Programas como o Bolsa Família, posteriormente implementado no século XXI, foram desenvolvidos para combater a pobreza e promover 
+            uma distribuição mais equitativa de recursos.
+        </p>
+        <p class="conteudo">A educação foi outra área onde os desafios sociais se manifestaram. A falta de acesso a uma educação de qualidade 
+            era e ainda é um problema, especialmente entre as camadas mais pobres da população. Durante a redemocratização, houve esforços para 
+            expandir o acesso à educação básica, mas os resultados foram variados, e a qualidade do ensino muitas vezes permaneceu um desafio.
+        </p>
+        <p class="conteudo">A saúde também estava entre as preocupações sociais. O acesso desigual a serviços de saúde e a qualidade variável 
+            dos serviços disponíveis representaram barreiras significativas para muitos brasileiros. A redemocratização trouxe a necessidade de 
+            reformas no sistema de saúde, buscando garantir um atendimento mais equitativo e eficaz.</p>
+        <div class="imagens"><img src="imagenstcc/diretasja2.jpg"></div>
+        <p class="conteudo">A desigualdade racial e étnica também era uma questão crítica. A população afro-brasileira, historicamente 
+            marginalizada, enfrentou desafios específicos, incluindo discriminação no mercado de trabalho, acesso limitado à educação e serviços
+            públicos. A redemocratização viu um aumento na conscientização sobre essas disparidades e o surgimento de movimentos sociais que 
+            buscavam promover a igualdade racial.</p>
+        <p class="conteudo">Em suma, durante o período de redemocratização no Brasil, os desafios sociais e a persistente desigualdade foram 
+            questões centrais que exigiram atenção e a implementação de políticas públicas abrangentes. Embora tenha havido avanços em algumas 
+            áreas, a luta contra a desigualdade social permanece como um desafio contínuo na sociedade brasileira.
+        </p>
+        <p class="conteudo">O Brasil pós-ditadura militar é um período de complexidade e diversidade, marcado por avanços e desafios em diversas
+            áreas. A democracia consolidada, juntamente com questões socioeconômicas, ambientais e políticas, continua a moldar o país em 
+            constante evolução.
+        </p>
     </div>
     <p></p>
     <div class="rodapé">
