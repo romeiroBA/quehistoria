@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Roma Antiga</title>
     <style>
+        @import url(https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Didact+Gothic&display=swap%27);
         .cabecalho {
             background-color: #573142;
             height: 120px;
@@ -21,20 +22,10 @@
             display: grid;
             place-items: center;
         }
-        .conteudo{
-            background-color: white;
-            height: 1000px;
-            width: 100%;
-            border-radius: 20px;
-        }
-        #titulo{
-            text-align: center;
-            font-family: Arial, Helvetica, sans-serif;
-        }
         .rodapé {
-        background-color: #573142;
-        height: 250px;
-        width: 100%;
+            background-color: #573142;
+            height: 250px;
+            width: 100%;
         }
         #logorodapé {
             width: 280px;
@@ -57,6 +48,68 @@
             margin-left: 92%;
             margin-top: 20px;
         }
+        .conteudo {
+            font-size: 20px;
+            font-family: 'Didatic Ghotic';
+            margin-left: 30px;
+            margin-right: 30px;
+            text-align: justify;
+            text-indent: 50px;
+            line-height: 30px;
+        }
+        #subtopicos {
+            font-size: 25px;
+            font-family: Arial, Helvetica, sans-serif;
+            margin-left: 30px;
+        }
+        .imagens {
+            display: grid;
+            place-items: center;
+        }
+        #titulo{
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        #tamanhoimagem {
+            max-width: 600px;
+            max-height: 400px;
+        }
+        @media screen and (max-width: 1100px){
+            #logo{
+            width: 230px;
+            height: 80px;
+            margin-left: 20px;
+            margin-top: 20px;
+            }
+
+        #logorodapé {
+            width: 200px;
+            height: 70px;
+            margin-left: 30px;
+            margin-top: 30px;
+            }
+
+        #logoif {
+            width: 35px;
+            height: 42px;
+            margin-left: 85%;
+            margin-top: 50px;
+            }
+
+        #descricao {
+            width: 200px;
+            height: 30px;
+            text-align: justify;
+            margin-left: 32px;
+            margin-top: -10px;
+            font-size: 14px;
+            color: white;
+            }
+        #tamanhoimagem {
+            max-width: 300px;
+            max-height: 200px;
+        }
+        }
     </style>
 </head>
 <body id="body">
@@ -64,8 +117,96 @@
         <img src="imagenstcc/logo.png" id="logo">
     </div>
     <p></p>
-    <div class="conteudo">
+    <div>
         <h1 id="titulo">Roma Antiga</h1>
+        <p class="conteudo">A Roma Antiga, uma das civilizações mais influentes da história, prosperou por mais de mil anos e deixou um legado duradouro em diversas áreas, como 
+            política, direito, arquitetura, literatura e cultura.</p>
+        <div class="imagens"><img src="imagenstcc/romaantiga1.png" id="tamanhoimagem"></div>
+        <h2 id="subtopicos">Origens e República Romana</h2>
+        <p class="conteudo">As origens de Roma remontam a uma lenda tradicionalmente datada do século VIII a.C., atribuindo sua fundação aos irmãos gêmeos Rômulo e Remo, criados
+            por uma loba. Situada na península Itálica, próxima ao rio Tibre, Roma se desenvolveu inicialmente como uma pequena aldeia agrícola.</p>
+        <p class="conteudo">O período inicial da Roma Antiga foi marcado pela Monarquia, que, segundo a tradição, durou de 753 a.C. a 509 a.C. Durante esse tempo, Roma foi 
+            governada por uma sucessão de reis, incluindo figuras lendárias como Rômulo, Numa Pompílio e Tarquínio, o Soberbo. A Monarquia romana foi caracterizada por conflitos
+            sociais e políticos, levando à expulsão do último rei e ao estabelecimento de uma forma republicana de governo.
+        </p>
+        <p class="conteudo">A República Romana foi fundada em 509 a.C., marcando o início de uma nova fase na história de Roma. O governo republicano era uma forma complexa de 
+            oligarquia, onde o poder era compartilhado entre diversas instituições. A sociedade romana estava estratificada em classes, incluindo patrícios (membros da 
+            aristocracia) e plebeus (cidadãos comuns). A plebe buscava uma maior representação política e direitos, o que levou à criação de várias instituições, como o 
+            Tribunato da Plebe, destinadas a proteger os interesses dos plebeus.</p>
+        <div class="imagens"><img src="imagenstcc/romaantiga2.png" id="tamanhoimagem"></div>
+        <p class="conteudo">O Senado Romano desempenhou um papel crucial na República, aconselhando os magistrados e influenciando as decisões políticas. Os magistrados, eleitos
+            anualmente, incluíam cônsules, pretores, censores e questores, cada qual com funções específicas. A República Romana foi caracterizada por conquistas territoriais 
+            significativas, conhecidas como "expansão romana", envolvendo guerras contra as tribos vizinhas e os povos itálicos.</p>
+        <p class="conteudo">A Lei das Doze Tábuas, estabelecida por volta de 450 a.C., representou um marco legislativo importante na República, codificando leis e garantindo 
+            direitos civis. O conceito de "imperium" concedido aos cônsules e líderes militares permitiu-lhes autoridade e comando nas esferas civil e militar.</p>
+        <p class="conteudo">Contudo, a República Romana também enfrentou desafios internos, como as Guerras Sociais (91-88 a.C.) e a luta de classes conhecida como a "Conflito 
+            das Ordens". A rivalidade entre generais, exemplificada por Mário e Sila, exacerbou as tensões e culminou nas Guerras Civis, marcando uma transição turbulenta para 
+            o período imperial.</p>
+        <p class="conteudo">Em resumo, as origens de Roma remontam a uma narrativa lendária, e a transição da Monarquia para a República marcou um período de significativa 
+            evolução política e social. A República Romana, com suas instituições, leis e expansões territoriais, moldou o caminho para a futura grandeza de Roma no cenário 
+            mundial.</p>
+        <h2 id="subtopicos">Guerras Púnicas e Expansão Romana</h2>
+        <p class="conteudo">As Guerras Púnicas, uma série de conflitos entre Roma e Cartago, foram marcos cruciais na expansão territorial e na consolidação do poder em todo o 
+            Mediterrâneo, ocorrendo ao longo de três séculos, de 264 a.C. a 146 a.C.</p>
+        <p class="conteudo">A Primeira Guerra Púnica (264-241 a.C.) teve origem nas disputas territoriais na Sicília. Roma, predominantemente uma potência terrestre na época, 
+            construiu uma frota naval para enfrentar a poderosa marinha cartaginesa. A guerra culminou na Batalha das Ilhas Égadas, em 241 a.C., onde Roma emergiu vitoriosa, 
+            forçando Cartago a ceder à Sicília.</p>
+        <p class="conteudo">A Segunda Guerra Púnica (218-201 a.C.) é notável pela figura carismática do general cartaginês Aníbal. Ele surpreendeu Roma ao cruzar os Alpes e 
+            infligir derrotas significativas, como nas batalhas de Canas. No entanto, Roma, liderada por generais como Cipião Africano, retaliou, vencendo em Zama em 202 a.C. 
+            As condições impostas por Roma enfraqueceram Cartago, perdendo territórios e sua frota naval.</p>
+        <p class="conteudo">A Terceira Guerra Púnica (149-146 a.C.) foi uma resposta romana ao ressurgimento cartaginês. O pretexto foi a acusação de que Cartago violara os 
+            termos do tratado anterior. A cidade foi sitiada e, após uma resistência feroz, Cartago foi destruída em 146 a.C., marcando o fim de sua existência como uma potência
+            significativa.
+        </p>
+        <p class="conteudo">A expansão romana resultante das Guerras Púnicas foi colossal. Além da aquisição da Sicília, a península Ibérica (Hispania) foi anexada após a 
+            derrota cartaginesa. A vitória nas Guerras Púnicas inaugurou um período de expansão pelo Mediterrâneo Oriental, anexando províncias como Macedônia, Grécia e Ásia 
+            Menor. A dominação romana sobre essas regiões solidificou seu status como a principal potência do mundo conhecido.
+        </p>
+        <p class="conteudo">Essa expansão, entretanto, trouxe desafios, incluindo a administração de vastos territórios, tensões sociais e políticas internas. A desigualdade 
+            entre os ricos e os pobres exacerbou-se, culminando nas Guerras Sociais (91-88 a.C.) e nas reformas promovidas pelos irmãos Graco para mitigar as tensões.
+        </p>
+        <p class="conteudo">As Guerras Púnicas foram eventos cruciais que não apenas moldaram o destino de Roma e Cartago, mas também catalisaram a expansão territorial romana,
+            transformando-a de uma cidade-estado na península Itálica para uma potência global no Mediterrâneo. Essas guerras deixaram um legado duradouro na história e na 
+            geopolítica do mundo antigo.
+        </p>
+        <h2 id="subtopicos">Júlio César e o Império Romano</h2>
+        <p class="conteudo">A transição da República para o Império Romano marcou um período de mudanças significativas na estrutura política, social e militar da antiga Roma, 
+            ocorrendo no final do século I a.C. e início do século I d.C.
+        </p>
+        <p class="conteudo">O contexto que precedeu a fundação do Império foi caracterizado por uma série de conflitos e instabilidade política. Júlio César emergiu como uma 
+            figura central durante esses tumultuosos eventos. Sua campanha militar nas Guerras Gálicas e sua vitória na Batalha de Farsalos em 48 a.C. solidificaram sua posição 
+            como um líder carismático. César retornou a Roma como ditador vitalício, um título que suscitou temores entre alguns senadores e patrícios, que viam nisso uma ameaça
+            à tradicional República. Em 44 a.C., Júlio César foi assassinado no famoso episódio conhecido como o "Idos de Março", provocando uma nova onda de instabilidade.
+        </p>
+        <p class="conteudo">A morte de César levou ao estabelecimento do Segundo Triunvirato, composto por Marco Antônio, Otaviano (mais tarde conhecido como Augusto, o primeiro
+            imperador) e Marco Emílio Lépido. Juntos, eles perseguiram os assassinos de César e eliminaram potenciais rivais, incluindo os conspiradores da facção senatorial.
+        </p>
+        <div class="imagens"><img src="imagenstcc/romaantiga3.png" id="tamanhoimagem"></div>
+        <p class="conteudo">As rivalidades entre Marco Antônio e Augusto culminaram na Batalha de Ácio, em 31 a.C., onde as forças combinadas de Augusto e seu aliado Agripa
+            derrotaram as de Marco Antônio e Cleópatra. Este evento selou o destino do Império Romano e marcou o início do principado de Augusto.
+        </p>
+        <div class="imagens"><img src="imagenstcc/romaantiga4.png" id="tamanhoimagem"></div>
+        <p class="conteudo">Augusto ascendeu ao poder e, em 27 a.C., ofereceu ao Senado seu "poder restaurador da República", embora tenha mantido controle significativo sobre 
+            o governo. Ele assumiu títulos como "Príncipe" e "Imperador", mas habilmente preservou certas instituições republicanas, mantendo a fachada de uma República 
+            restaurada. Augusto governou durante um período conhecido como Pax Romana (27 a.C. - 180 d.C.), caracterizado por estabilidade e expansão territorial controlada. 
+            Ele implementou reformas administrativas, fortalecendo o exército e desenvolvendo um sistema burocrático eficiente. Suas reformas sociais e de construção de obras 
+            públicas também contribuíram para a prosperidade do império.</p>
+        <p class="conteudo">Augusto reinou até a sua morte em 14 d.C., deixando um legado de estabilidade política e administrativa. Seu sucessor, Tibério, marcou o início da dinastia 
+            julio-claudiana. Ao longo dos séculos, o Império Romano expandiu-se, enfrentou desafios internos e externos, passando por diversas dinastias e imperadores, mas o modelo de 
+            governo estabelecido por Augusto influenciou o curso da história romana por séculos.</p>
+        <p class="conteudo">Em resumo, a transição da República para o Império Romano foi um processo complexo e multifacetado, envolvendo eventos decisivos como as campanhas de
+            Júlio César, a ascensão de Augusto e a consolidação do poder imperial. Essa transição estabeleceu as bases para a Pax Romana, um período de notável estabilidade e 
+            realizações que caracterizou o auge do Império Romano.
+        </p>
+        <h2 id="subtopicos">Engenharia e Arquitetura</h2>
+        <p class="conteudo">As inovações em engenharia e arquitetura durante o Império Romano foram extraordinárias, deixando um legado marcante que continua a inspirar 
+            admiradores e pesquisadores até os dias de hoje. Entre as realizações mais notáveis, as inovações em engenharia e arquitetura durante o Império Romano foram notáveis
+            e deixaram um legado duradouro. Destacam-se os aquedutos, como o de Segóvia, as estradas pavimentadas, como a Via Ápia, e pontes monumentais, como a Ponte de 
+            Alcântara. O Coliseu representou uma proeza em engenharia para eventos multifuncionais, enquanto os banhos romanos, como os de Caracala, revelaram domínio em 
+            sistemas hidráulicos. Arcos do triunfo, como o de Constantino, celebraram vitórias, e o Panteão impressionou com sua cúpula e uso inovador de concreto. Essas 
+            construções, eficientes e duráveis, continuam a influenciar a engenharia e arquitetura modernas.
+        </p>
+        <div class="imagens"><img src="imagenstcc/romaantiga5.png" id="tamanhoimagem"></div>
     </div>
     <p></p>
     <div class="rodapé">
