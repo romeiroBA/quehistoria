@@ -204,4 +204,31 @@ input {
             font-family: cursive;
             }
 
+            .content {
+                height: 220px;
+                width: 335px;
+                border-radius: 20px;
+                overflow: hidden;
+                margin: auto;
+                display: block;
+            }
+
+            .navigation {
+                position: absolute;
+                bottom: 30px;
+                top: 325px;
+                left: 50%;
+                transform: translate(-50%);
+                display: flex;
+            }
+
+            .label {
+                width: 34px;
+                height: 12px;
+                border: 2px solid #BF7F1C;
+                margin: 6px;
+                border-radius: 5px;
+                cursor: pointer;
+                transition: 0.5s;
+            }
     }
