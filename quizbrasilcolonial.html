@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Brasil Colonial</title>
+</head>
+<style>
+    body {
+        background: #FFF3D9;
+        font-family:'Courier New', Courier, monospace;
+        box-sizing: border-box;
+    }
+
+    .app {
+        background: #fff;
+        width: 90%;
+        max-width: 800px;
+        border-radius: 10px;
+        padding: 30px;
+        overflow: hidden;
+        margin: auto;
+        display: block;
+    }
+
+    .app h1 {
+        font-size: 25px;
+        color: black;
+        font-weight: 600px;
+        border-bottom: 1px solid #333;
+        padding-bottom: 30px;
+    }
+
+    #question {
+        text-align: justify;
+    }
+
+    .quiz {
+        padding: 20px 0;
+    }
+
+    .quiz h2 {
+        font-size: 18px;
+        color: black;
+        font-weight: 600px;
+    }
+
+    .btn {
+        background: #fff;
+        color: #222;
+        font-weight: 500px;
+        width: 100%;
+        border: 1px solid #222;
+        padding: 10px;
+        margin: 10px;
+        text-align: left;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: all 0.3s;
+    }
+
+    .btn:hover:not([disabled]) {
+        background: #222;
+        color: #fff;
+    }
+
+    .btn:disabled{
+        cursor: no-drop;
+    }
+
+    #next-btn {
+        background: #001e4d;
+        color: #fff;
+        font-weight: 500px;
+        width: 150px;
+        border: 0;
+        padding: 10px;
+        margin: 20px auto 0;
+        border-radius: 4px;
+        cursor: pointer;
+        display: none;
+    }
+
+    .correct {
+        background: #9aeabc;
+    }
+
+    .incorrect {
+        background: #ff9393;
+    }
+
+    .cabecalho {
+        background-color: #573142;
+        height: 120px;
+        width: 100%; 
+    }
+
+    #logo{
+        width: 250px;
+        height: 100px;
+        margin-left: 40px;
+        margin-top: 10px;
+    }
+</style>
+<body>
+    <div class="cabecalho">
+        <img src="imagenstcc/logo.png" id="logo">
+    </div>
+    <p></p>
+    <div class="app">
+        <h1>Quiz Brasil Colonial</h1>
+        <div class="quiz">
+            <h2 id="question">Questão Aqui</h2>
+            <div id="botoes-perguntas">
+                <button class="btn">Alternativa 1</button>
+                <button class="btn">Alternativa 2</button>
+                <button class="btn">Alternativa 3</button>
+                <button class="btn">Alternativa 4</button>
+            </div>
+            <button id="next-btn">Next</button>
+        </div>
+    </div>
+</body>
+<script>
+        const questions = [
+        {
+            question: "O período colonial no Brasil teve início em que ano?",
+            answers: [
+                {text: "1500", correct: false},
+                {text: "1530", correct: true},
+                {text: "1600", correct: false},
+                {text: "1630", correct: false},
+            ]
+        },
+        {
+            question: "A primeira atividade econômica realizada no país foi:",
+            answers: [
+                {text: "Mineração", correct: false},
+                {text: "Produção cafeeira", correct: false},
+                {text: "Produção açucareira", correct: false},
+                {text: "Exploração de Pau-Brasil", correct: true},
+            ] 
+        },
+        {
+            question: "Qual foi a primeira capital do Brasil?",
+            answers: [
+                {text: "São Paulo", correct: false},
+                {text: "Brasília", correct: false},
+                {text: "Rio de Janeiro", correct: false},
+                {text: "Salvador", correct: true},
+            ] 
+        },
+        {
+            question: "(UNAERP-SP/adaptado) Em 1534, o governo português concluiu que a única forma de ocupação do Brasil seria através da colonização. Era necessário colonizar, simultaneamente, todo o extenso território brasileiro. Essa colonização dirigida pelo governo português se deu através da:",
+            answers: [
+                {text: "Criação da Companhia Geral do Comércio do Estado do Brasil.", correct: false},
+                {text: "Criação do sistema de governo-geral e câmaras municipais.", correct: false},
+                {text: "Criação das capitanias hereditárias.", correct: true},
+                {text: "Montagem do sistema colonial.", correct: false},
+            ] 
+        },
+        {
+            question: "IBFC (2021) - Um tratado assinado em 1494 entre Portugal e Espanha dividiu, por meio de uma linha imaginária, as terras da América do Sul (incluindo o atual território do Brasil) entre essas duas nações. Assinale a alternativa que indica o nome desse tratado.",
+            answers: [
+                {text: "Tratado de Tordesilhas", correct: true},
+                {text: "Tratado de Madrid", correct: false},
+                {text: "tratado de Versalhes", correct: false},
+                {text: "Tratado de Petrópolis", correct: false},
+            ] 
+        },
+        {
+            question: "IBGP (2021) - Assinale a alternativa que descreve CORRETAMENTE o motivo pelo qual a Coroa Portuguesa transferiu-se para o território brasileiro no ano de 1808:",
+            answers: [
+                {text: "A Revolução Francesa, cujos rebeldes caçavam e assassinavam monarcas pela Europa.", correct: false},
+                {text: "A crescente movimentação pró-independência que ameaçava o doimínio português no Brasil.", correct: false},
+                {text: "A invasão napoleônica em Portugal, que não aderiu ao bloqueio contra a Inglaterra.", correct: true},
+                {text: "A necessidade de dinamizar a política interna brasileira, e a crise econômica que ocorria em Portugal.", correct: false},
+            ] 
+        }
+    ];
+
+    const questionElement = document.getElementById("question");
+    const answerButtons = document.getElementById("botoes-perguntas");
+    const nextButton = document.getElementById("next-btn");
+
+    let currentQuestionIndex = 0;
+    let score = 0;
+
+
+    function startQuiz(){
+        currentQuestionIndex = 0;
+        score = 0;
+        nextButton.innerHTML = "PRÓXIMA";
+        showQuestion();
+    }
+
+    function showQuestion(){
+        resetState();
+        let currentQuestion = questions[currentQuestionIndex];
+        let questionNo = currentQuestionIndex + 1;
+        questionElement.innerHTML = questionNo + ". " + currentQuestion.
+        question;
+
+        currentQuestion.answers.forEach(answer => {
+            const button = document.createElement("button");
+            button.innerHTML = answer.text;
+            button.classList.add("btn");
+            answerButtons.appendChild(button);
+            if(answer.correct){
+                button.dataset.correct = answer.correct;
+            }
+            button.addEventListener("click", selectAnswer);
+        });
+    }
+
+    function resetState(){
+        nextButton.style.display = "none";
+        while(answerButtons.firstChild){
+            answerButtons.removeChild(answerButtons.firstChild);
+        }
+    }
+
+    function selectAnswer(e){
+        const selectedBtn = e.target;
+        const isCorrect = selectedBtn.dataset.correct === "true";
+        if(isCorrect){
+            selectedBtn.classList.add("correct");
+            score++;
+        } else {
+            selectedBtn.classList.add("incorrect")
+        }
+        Array.from(answerButtons.children).forEach(button => {
+            if(button.dataset.correct === "true"){
+                button.classList.add("correct");
+            }
+            button.disabled = true;
+        });
+        nextButton.style.display = "block";
+    }
+
+    function showScore(){
+        resetState();
+        questionElement.innerHTML = `Você acertou ${score} de ${questions.length}!`;
+        nextButton.innerHTML = "Tentar Novamente";
+        nextButton.style.display = "block";
+    }
+
+    function handleNextButton(){
+        currentQuestionIndex++;
+        if(currentQuestionIndex < questions.length){
+            showQuestion();
+        } else {
+            showScore();
+        }
+    }
+
+    nextButton.addEventListener("click", ()=>{
+        if(currentQuestionIndex < questions.length){
+            handleNextButton();
+        } else {
+            startQuiz();
+        }
+    });
+
+    startQuiz();
+</script>
+</html>
