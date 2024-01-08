@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Primeiro Reinado</title>
+</head>
+<style>
+    body {
+        background: #FFF3D9;
+        font-family:'Courier New', Courier, monospace;
+        box-sizing: border-box;
+    }
+
+    .app {
+        background: #fff;
+        width: 90%;
+        max-width: 800px;
+        border-radius: 10px;
+        padding: 30px;
+        overflow: hidden;
+        margin: auto;
+        display: block;
+    }
+
+    .app h1 {
+        font-size: 25px;
+        color: black;
+        font-weight: 600px;
+        border-bottom: 1px solid #333;
+        padding-bottom: 30px;
+    }
+
+    #question {
+        text-align: justify;
+    }
+
+    .quiz {
+        padding: 20px 0;
+    }
+
+    .quiz h2 {
+        font-size: 18px;
+        color: black;
+        font-weight: 600px;
+    }
+
+    .btn {
+        background: #fff;
+        color: #222;
+        font-weight: 500px;
+        width: 100%;
+        border: 1px solid #222;
+        padding: 10px;
+        margin: 10px;
+        text-align: left;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: all 0.3s;
+    }
+
+    .btn:hover:not([disabled]) {
+        background: #222;
+        color: #fff;
+    }
+
+    .btn:disabled{
+        cursor: no-drop;
+    }
+
+    #next-btn {
+        background: #001e4d;
+        color: #fff;
+        font-weight: 500px;
+        width: 150px;
+        border: 0;
+        padding: 10px;
+        margin: 20px auto 0;
+        border-radius: 4px;
+        cursor: pointer;
+        display: none;
+    }
+
+    .correct {
+        background: #9aeabc;
+    }
+
+    .incorrect {
+        background: #ff9393;
+    }
+
+    .cabecalho {
+        background-color: #573142;
+        height: 120px;
+        width: 100%; 
+    }
+
+    #logo{
+        width: 250px;
+        height: 100px;
+        margin-left: 40px;
+        margin-top: 10px;
+    }
+</style>
+<body>
+    <div class="cabecalho">
+        <img src="imagenstcc/logo.png" id="logo">
+    </div>
+    <p></p>
+    <div class="app">
+        <h1>Quiz Primeiro Reinado</h1>
+        <div class="quiz">
+            <h2 id="question">Questão Aqui</h2>
+            <div id="botoes-perguntas">
+                <button class="btn">Alternativa 1</button>
+                <button class="btn">Alternativa 2</button>
+                <button class="btn">Alternativa 3</button>
+                <button class="btn">Alternativa 4</button>
+            </div>
+            <button id="next-btn">Next</button>
+        </div>
+    </div>
+</body>
+<script>
+        const questions = [
+        {
+            question: "Quais datas, respectivamente, delimitam o início e encerramento do Primeiro Reinado?",
+            answers: [
+                {text: "1 de Setembro de 1822 e 1 de Abril de 1831", correct: false},
+                {text: "7 de Setembro de 1822 e 7 de Abril de 1831", correct: true},
+                {text: "1 de Abril de 1831 e 1 de Setembro de 1822", correct: false},
+                {text: "7 de Abril de 1831 e 7 de Setembro de 1822", correct: false},
+            ]
+        },
+        {
+            question: "A primeira Constituição Brasileira foi outorgada em que ano?",
+            answers: [
+                {text: "1821", correct: false},
+                {text: "1822", correct: false},
+                {text: "1823", correct: false},
+                {text: "1824", correct: true},
+            ] 
+        },
+        {
+            question: "O primeiro grande conflito internacional do qual o Brasil participou depois de sua independência foi:",
+            answers: [
+                {text: "Guerra do Paraguai", correct: false},
+                {text: "Guerra do Pacífico", correct: false},
+                {text: "Guerra da Cisplatina", correct: true},
+                {text: "Guerra do Prata", correct: false},
+            ] 
+        },
+        {
+            question: "Qual foi a rebelião de caráter separatista que aconteceu no Nordeste brasileiro durante o Primeiro Reinado?",
+            answers: [
+                {text: "Revolução Pernambucana", correct: false},
+                {text: "Confederação do Equador", correct: true},
+                {text: "Revolução Praieira", correct: false},
+                {text: "Guerra dos Mascates", correct: false},
+            ] 
+        },
+        {
+            question: "O que aconteceu após a abdicação de Dom Pedro I?",
+            answers: [
+                {text: "Foi iniciado o Período Regencial, até o herdeiro completar 18 anos.", correct: true},
+                {text: "Dom Pedro II foi coroado imperador.", correct: false},
+                {text: "A república foi proclamada.", correct: false},
+                {text: "A filha mais velha de Dom Pedro I assumiu o trono.", correct: false},
+            ] 
+        },
+        {
+            question: "IFBC (2021) As revoltas no Brasil Império se caracterizaram em sua maioria como separatistas. Assinale a alternativa que apresenta a qual contexto esse caráter estava ligado.",
+            answers: [
+                {text: "O conservadorismo monárquico absolutista estava em voga no período.", correct: true},
+                {text: "O Antigo Regime ainda era a política dominante nas grandes nações europeias, especialmente na Inglaterra.", correct: false},
+                {text: "O Antigo Regime entrou em crise devido ao avanço das relações comerciais burguesas.", correct: false},
+                {text: "A Revolução Industrial já estava em sua 3ª fase nesse período histórico.", correct: false},
+            ] 
+        }
+    ];
+
+    const questionElement = document.getElementById("question");
+    const answerButtons = document.getElementById("botoes-perguntas");
+    const nextButton = document.getElementById("next-btn");
+
+    let currentQuestionIndex = 0;
+    let score = 0;
+
+
+    function startQuiz(){
+        currentQuestionIndex = 0;
+        score = 0;
+        nextButton.innerHTML = "PRÓXIMA";
+        showQuestion();
+    }
+
+    function showQuestion(){
+        resetState();
+        let currentQuestion = questions[currentQuestionIndex];
+        let questionNo = currentQuestionIndex + 1;
+        questionElement.innerHTML = questionNo + ". " + currentQuestion.
+        question;
+
+        currentQuestion.answers.forEach(answer => {
+            const button = document.createElement("button");
+            button.innerHTML = answer.text;
+            button.classList.add("btn");
+            answerButtons.appendChild(button);
+            if(answer.correct){
+                button.dataset.correct = answer.correct;
+            }
+            button.addEventListener("click", selectAnswer);
+        });
+    }
+
+    function resetState(){
+        nextButton.style.display = "none";
+        while(answerButtons.firstChild){
+            answerButtons.removeChild(answerButtons.firstChild);
+        }
+    }
+
+    function selectAnswer(e){
+        const selectedBtn = e.target;
+        const isCorrect = selectedBtn.dataset.correct === "true";
+        if(isCorrect){
+            selectedBtn.classList.add("correct");
+            score++;
+        } else {
+            selectedBtn.classList.add("incorrect")
+        }
+        Array.from(answerButtons.children).forEach(button => {
+            if(button.dataset.correct === "true"){
+                button.classList.add("correct");
+            }
+            button.disabled = true;
+        });
+        nextButton.style.display = "block";
+    }
+
+    function showScore(){
+        resetState();
+        questionElement.innerHTML = `Você acertou ${score} de ${questions.length}!`;
+        nextButton.innerHTML = "Tentar Novamente";
+        nextButton.style.display = "block";
+    }
+
+    function handleNextButton(){
+        currentQuestionIndex++;
+        if(currentQuestionIndex < questions.length){
+            showQuestion();
+        } else {
+            showScore();
+        }
+    }
+
+    nextButton.addEventListener("click", ()=>{
+        if(currentQuestionIndex < questions.length){
+            handleNextButton();
+        } else {
+            startQuiz();
+        }
+    });
+
+    startQuiz();
+</script>
+</html>
