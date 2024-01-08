@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Ditadura Militar</title>
+</head>
+<style>
+    body {
+        background: #FFF3D9;
+        font-family:'Courier New', Courier, monospace;
+        box-sizing: border-box;
+    }
+
+    .app {
+        background: #fff;
+        width: 90%;
+        max-width: 800px;
+        border-radius: 10px;
+        padding: 30px;
+        overflow: hidden;
+        margin: auto;
+        display: block;
+    }
+
+    .app h1 {
+        font-size: 25px;
+        color: black;
+        font-weight: 600px;
+        border-bottom: 1px solid #333;
+        padding-bottom: 30px;
+    }
+
+    #question {
+        text-align: justify;
+    }
+
+    .quiz {
+        padding: 20px 0;
+    }
+
+    .quiz h2 {
+        font-size: 18px;
+        color: black;
+        font-weight: 600px;
+    }
+
+    .btn {
+        background: #fff;
+        color: #222;
+        font-weight: 500px;
+        width: 100%;
+        border: 1px solid #222;
+        padding: 10px;
+        margin: 10px;
+        text-align: left;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: all 0.3s;
+    }
+
+    .btn:hover:not([disabled]) {
+        background: #222;
+        color: #fff;
+    }
+
+    .btn:disabled{
+        cursor: no-drop;
+    }
+
+    #next-btn {
+        background: #001e4d;
+        color: #fff;
+        font-weight: 500px;
+        width: 150px;
+        border: 0;
+        padding: 10px;
+        margin: 20px auto 0;
+        border-radius: 4px;
+        cursor: pointer;
+        display: none;
+    }
+
+    .correct {
+        background: #9aeabc;
+    }
+
+    .incorrect {
+        background: #ff9393;
+    }
+
+    .cabecalho {
+        background-color: #573142;
+        height: 120px;
+        width: 100%; 
+    }
+
+    #logo{
+        width: 250px;
+        height: 100px;
+        margin-left: 40px;
+        margin-top: 10px;
+    }
+</style>
+<body>
+    <div class="cabecalho">
+        <img src="imagenstcc/logo.png" id="logo">
+    </div>
+    <p></p>
+    <div class="app">
+        <h1>Quiz Ditadura Militar</h1>
+        <div class="quiz">
+            <h2 id="question">Questão Aqui</h2>
+            <div id="botoes-perguntas">
+                <button class="btn">Alternativa 1</button>
+                <button class="btn">Alternativa 2</button>
+                <button class="btn">Alternativa 3</button>
+                <button class="btn">Alternativa 4</button>
+            </div>
+            <button id="next-btn">Next</button>
+        </div>
+    </div>
+</body>
+<script>
+        const questions = [
+        {
+            question: "FUNDATEC (2021/adaptado) Assinale a alternativa que apresenta, respectivamente, o primeiro e último presidente do Regime Militar Brasileiro.",
+            answers: [
+                {text: "Emílio Garrastazu Médici e Itamar Franco", correct: false},
+                {text: "Ernesto Geisel e Emílio Garrastazu Médici", correct: false},
+                {text: "Castelo Branco e João Baptista de Oliveira Figueiredo", correct: true},
+                {text: "João Baptista de Oliveira Figueiredo e Ernesto Geisel", correct: false},
+            ]
+        },
+        {
+            question: "O presidente brasileiro destitupido com o golpe civil-militar de 1964 foi:",
+            answers: [
+                {text: "Jânio Quadros", correct: false},
+                {text: "João Goulart", correct: true},
+                {text: "Getúlio Vargas", correct: false},
+                {text: "Juscelino Kubitschek", correct: false},
+            ] 
+        },
+        {
+            question: "FMJ SP (2009/adaptado) Em 31 de março de 1964, os militares brasileiros, apoiados pelos Estados Unidos e por parcelas da classe política e empresarial do país, assumiram o controle do Estado por meio de um golpe. A justificativa para esse golpe de Estado baseava-se na proteção contra:",
+            answers: [
+                {text: "O comunismo internacional, visto como ameaça ás instituições democráticas no panorama de polarização política pós 2ª guerra.", correct: true},
+                {text: "As ditaduras fascistas em franco processo de expansão no continente sul-americano, já instaladas na Argentina e no Chile.", correct: false},
+                {text: "A tentativa dos partidos de esquerda de implantar um regime parlamentarista, considerado estranho à tradição brasileira.", correct: false},
+                {text: "A violação dos direitos individuais garantidos na Constituição que vinha sendo praticada desde a renúncia de Jânio Quadros.", correct: false},
+            ] 
+        },
+        {
+            question: 'ENEM (2010/adaptado) "Art. 10 - Fica suspensa a garantia de habeas corpus, nos casos de crimes políticos, contra a segurança nacional, a ordem econômica e social e a economia popular.; Art. 11 - Excluem-se de qualquer apreciação judicial todos os atos praticados de acordo com este Ato Institucional e seus Atos Complementares, bem como os respectivos efeitos." Nos artigos do AI-5 selecionados, o governo militar procurou limitar a atuação do poder judiciário, porque isso significava:',
+            answers: [
+                {text: "A substituição da Constituição de 1967", correct: false},
+                {text: "O início do processo de distensão política", correct: false},
+                {text: "A garantia legal para o autoritarismo dos juízes", correct: false},
+                {text: "A ampliação dos poderes nas mãos do Executivo", correct: true},
+            ] 
+        },
+        {
+            question: "FUVEST (1997/adaptado) A vitória do Brasil na Copa do Mundo de 1970:",
+            answers: [
+                {text: "Não teve qualquer repercussão no campo político, por se tratar de um acontecimento estritamente esportivo.", correct: false},
+                {text: "Alentou o trabalho das oposições que deram destaque à capacidade do povo brasileiro de realizar grandes proezas.", correct: false},
+                {text: "Propiciou uma operação de propaganda do governo Médici, tentando associar a conquista ao regime autoritário.", correct: true},
+                {text: "Favoreceu o projeto de abertura do general Geisel, ao criar um clima de otimismo pelas realizações do governo.", correct: false},
+            ] 
+        },
+        {
+            question: 'Mack SP (2004/adaptado) A “Marcha da Família com Deus pela Liberdade”, em março de 1964, na cidade de São Paulo, foi:',
+            answers: [
+                {text: "Uma demonstração de forças conservadoras de direita contra o que chamavam de esquerdismo e comunismo do governo João Goulart.", correct: true},
+                {text: "Uma manifestação de apoio das famílias de trabalhadores brasileiros ao governo do presidente Goulart.", correct: false},
+                {text: "Uma demonstração de repúdio das classes trabalhadoras a uma possível intervenção militar, com apoio norte-americano, ao governo de Goulart.", correct: false},
+                {text: "Uma manifestação, de setores conservadores da sociedade brasileira, de revolta contra a tentativa de se derrubar o governo constitucional.", correct: false},
+            ] 
+        },
+    ];
+
+    const questionElement = document.getElementById("question");
+    const answerButtons = document.getElementById("botoes-perguntas");
+    const nextButton = document.getElementById("next-btn");
+
+    let currentQuestionIndex = 0;
+    let score = 0;
+
+
+    function startQuiz(){
+        currentQuestionIndex = 0;
+        score = 0;
+        nextButton.innerHTML = "PRÓXIMA";
+        showQuestion();
+    }
+
+    function showQuestion(){
+        resetState();
+        let currentQuestion = questions[currentQuestionIndex];
+        let questionNo = currentQuestionIndex + 1;
+        questionElement.innerHTML = questionNo + ". " + currentQuestion.
+        question;
+
+        currentQuestion.answers.forEach(answer => {
+            const button = document.createElement("button");
+            button.innerHTML = answer.text;
+            button.classList.add("btn");
+            answerButtons.appendChild(button);
+            if(answer.correct){
+                button.dataset.correct = answer.correct;
+            }
+            button.addEventListener("click", selectAnswer);
+        });
+    }
+
+    function resetState(){
+        nextButton.style.display = "none";
+        while(answerButtons.firstChild){
+            answerButtons.removeChild(answerButtons.firstChild);
+        }
+    }
+
+    function selectAnswer(e){
+        const selectedBtn = e.target;
+        const isCorrect = selectedBtn.dataset.correct === "true";
+        if(isCorrect){
+            selectedBtn.classList.add("correct");
+            score++;
+        } else {
+            selectedBtn.classList.add("incorrect")
+        }
+        Array.from(answerButtons.children).forEach(button => {
+            if(button.dataset.correct === "true"){
+                button.classList.add("correct");
+            }
+            button.disabled = true;
+        });
+        nextButton.style.display = "block";
+    }
+
+    function showScore(){
+        resetState();
+        questionElement.innerHTML = `Você acertou ${score} de ${questions.length}!`;
+        nextButton.innerHTML = "Tentar Novamente";
+        nextButton.style.display = "block";
+    }
+
+    function handleNextButton(){
+        currentQuestionIndex++;
+        if(currentQuestionIndex < questions.length){
+            showQuestion();
+        } else {
+            showScore();
+        }
+    }
+
+    nextButton.addEventListener("click", ()=>{
+        if(currentQuestionIndex < questions.length){
+            handleNextButton();
+        } else {
+            startQuiz();
+        }
+    });
+
+    startQuiz();
+</script>
+</html>
