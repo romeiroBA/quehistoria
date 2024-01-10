@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quiz Primeiro Reinado</title>
+    <title>Quiz Grécia Antiga</title>
 </head>
 <style>
     @import url(https://fonts.googleapis.com/css2?family=Sofia&display=swap);
@@ -103,7 +103,6 @@
         margin-left: 40px;
         margin-top: 10px;
     }
-
     #linkindex {
         font-size: 20px;
         color: #FFF3D9;
@@ -117,6 +116,7 @@
         font-family: Arial, Helvetica, sans-serif;
         margin-left: 5%;
     }
+
     @media screen and (max-width: 1100px) {
         #logo{
             width: 230px;
@@ -159,7 +159,7 @@
     </div>
     <p></p>
     <div class="app">
-        <h1>Quiz Primeiro Reinado</h1>
+        <h1>Quiz Grécia Antiga</h1>
         <div class="quiz">
             <h2 id="question">Questão Aqui</h2>
             <div id="botoes-perguntas">
@@ -175,59 +175,59 @@
 <script>
         const questions = [
         {
-            question: "Quais datas, respectivamente, delimitam o início e encerramento do Primeiro Reinado?",
+            question: "Qual era a religião da antiga Grécia?",
             answers: [
-                {text: "1 de Setembro de 1822 e 1 de Abril de 1831", correct: false},
-                {text: "7 de Setembro de 1822 e 7 de Abril de 1831", correct: true},
-                {text: "1 de Abril de 1831 e 1 de Setembro de 1822", correct: false},
-                {text: "7 de Abril de 1831 e 7 de Setembro de 1822", correct: false},
+                {text: "Cristã", correct: false},
+                {text: "Judaica", correct: false},
+                {text: "Politeísta", correct: true},
+                {text: "Islâmica", correct: false},
+            ] 
+        },
+        {
+            question: "A Guerra do Peloponeso foi uma guerra civil que ocorreu na Grécia Antiga entre 431 e 404 a.C. Esse conflito militar durou 27 anos e terminou com a vitória de:",
+            answers: [
+                {text: "Tebas", correct: false},
+                {text: "Esparta", correct: true},
+                {text: "Atenas", correct: false},
+                {text: "Creta", correct: false},
             ]
         },
         {
-            question: "A primeira Constituição Brasileira foi outorgada em que ano?",
+            question: 'MACKENZIE (adaptado) "Conta a história que, com a ajuda de Atena, Epeu construiu um grande cavalo de madeira, onde escondeu guerreiros. Ulisses ardilosamente introduziu-o em Troia para que os guerreiros a saqueassem." Em sua obra, o autor transformou a luta pelo controle do estreito de Dardanelos (Helesponto) num conflito envolvendo deuses e heróis. A obra e o respectivo autor são: ',
             answers: [
-                {text: "1821", correct: false},
-                {text: "1822", correct: false},
-                {text: "1823", correct: false},
-                {text: "1824", correct: true},
+                {text: "A República - Platão", correct: false},
+                {text: "Édipo Rei - Sófocles", correct: false},
+                {text: "A Ilíada - Homero", correct: true},
+                {text: "Os Sete Contra Tebas - Ésquilo", correct: false},
             ] 
         },
         {
-            question: "O primeiro grande conflito internacional do qual o Brasil participou depois de sua independência foi:",
+            question: "QUADRIX (2021/adaptado) Criada na Antiguidade grega, foi reintroduzida na civilização contemporânea com o novo significado imposto pela passagem do tempo. Realizada a cada quatro anos, sua última edição, em 2021, teve como sede a capital japonesa, Tóquio. Trata-se da:",
             answers: [
-                {text: "Guerra do Paraguai", correct: false},
-                {text: "Guerra do Pacífico", correct: false},
-                {text: "Guerra da Cisplatina", correct: true},
-                {text: "Guerra do Prata", correct: false},
+                {text: "Copa do Mundo de Futebol", correct: false},
+                {text: "Copa das Confederações", correct: false},
+                {text: "Olimpíada", correct: true},
+                {text: "Liga dos Campeões", correct: false},
             ] 
         },
         {
-            question: "Qual foi a rebelião de caráter separatista que aconteceu no Nordeste brasileiro durante o Primeiro Reinado?",
+            question: "Qual foi a cidade grega atingida por uma epidemia exatamente no momento em que acontecia a Guerra do Peloponeso?",
             answers: [
-                {text: "Revolução Pernambucana", correct: false},
-                {text: "Confederação do Equador", correct: true},
-                {text: "Revolução Praieira", correct: false},
-                {text: "Guerra dos Mascates", correct: false},
+                {text: "Esparta", correct: false},
+                {text: "Corinto", correct: false},
+                {text: "Atenas", correct: true},
+                {text: "Argos", correct: false},
             ] 
         },
         {
-            question: "O que aconteceu após a abdicação de Dom Pedro I?",
+            question: "As Guerras Médicas foram um conflito dos gregos contra:",
             answers: [
-                {text: "Foi iniciado o Período Regencial, até o herdeiro completar 18 anos.", correct: true},
-                {text: "Dom Pedro II foi coroado imperador.", correct: false},
-                {text: "A república foi proclamada.", correct: false},
-                {text: "A filha mais velha de Dom Pedro I assumiu o trono.", correct: false},
+                {text: "Elamitas", correct: false},
+                {text: "Assírios", correct: false},
+                {text: "Hititas", correct: false},
+                {text: "Persas", correct: true},
             ] 
         },
-        {
-            question: "IFBC (2021) As revoltas no Brasil Império se caracterizaram em sua maioria como separatistas. Assinale a alternativa que apresenta a qual contexto esse caráter estava ligado.",
-            answers: [
-                {text: "O conservadorismo monárquico absolutista estava em voga no período.", correct: true},
-                {text: "O Antigo Regime ainda era a política dominante nas grandes nações europeias, especialmente na Inglaterra.", correct: false},
-                {text: "O Antigo Regime entrou em crise devido ao avanço das relações comerciais burguesas.", correct: false},
-                {text: "A Revolução Industrial já estava em sua 3ª fase nesse período histórico.", correct: false},
-            ] 
-        }
     ];
 
     const questionElement = document.getElementById("question");

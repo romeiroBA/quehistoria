@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quiz Primeiro Reinado</title>
+    <title>Quiz Processo de Independência</title>
 </head>
 <style>
     @import url(https://fonts.googleapis.com/css2?family=Sofia&display=swap);
@@ -117,6 +117,7 @@
         font-family: Arial, Helvetica, sans-serif;
         margin-left: 5%;
     }
+
     @media screen and (max-width: 1100px) {
         #logo{
             width: 230px;
@@ -159,7 +160,7 @@
     </div>
     <p></p>
     <div class="app">
-        <h1>Quiz Primeiro Reinado</h1>
+        <h1>Quiz Processo de Independência</h1>
         <div class="quiz">
             <h2 id="question">Questão Aqui</h2>
             <div id="botoes-perguntas">
@@ -175,59 +176,59 @@
 <script>
         const questions = [
         {
-            question: "Quais datas, respectivamente, delimitam o início e encerramento do Primeiro Reinado?",
+            question: "Um dos fatos que fizeram o processo de independência do Brasil ser diferente das demais nações da América hispânica foi:",
             answers: [
-                {text: "1 de Setembro de 1822 e 1 de Abril de 1831", correct: false},
-                {text: "7 de Setembro de 1822 e 7 de Abril de 1831", correct: true},
-                {text: "1 de Abril de 1831 e 1 de Setembro de 1822", correct: false},
-                {text: "7 de Abril de 1831 e 7 de Setembro de 1822", correct: false},
+                {text: "A vinda Família Real portuguesa para o Brasil.", correct: true},
+                {text: "As guerras napoleônicas na Europa.", correct: false},
+                {text: "As ideias iluministas surgidas na França.", correct: false},
+                {text: "A crise do sistema colonial.", correct: false},
             ]
         },
         {
-            question: "A primeira Constituição Brasileira foi outorgada em que ano?",
+            question: "A expansão do Império napoleônico refletiu diretamente na independência do Brasil, pois:",
             answers: [
-                {text: "1821", correct: false},
-                {text: "1822", correct: false},
-                {text: "1823", correct: false},
-                {text: "1824", correct: true},
+                {text: "Portugal apoiou a Inglaterra e foi obrigado a lutar ao seu lado contra Bonaparte, deixando as colônias abandonadas.", correct: false},
+                {text: "Napoleão Bonaparte invadiu Portugal, a Família Real portuguesa foi para o Brasil e assim, os brasileiros ganharam mais vantagens comerciais.", correct: true},
+                {text: "As batalhas napoleônicas mudaram o mapa europeu fazendo com que Portugal modernizasse seu exército e se fortalecesse.", correct: false},
+                {text: "Os franceses invadiram Portugal e ajudaram os brasileiros a lutar contra Dom João VI.", correct: false},
             ] 
         },
         {
-            question: "O primeiro grande conflito internacional do qual o Brasil participou depois de sua independência foi:",
+            question: 'ENEM (2010/adaptado) Leia o texto: “Eu, o Príncipe Regente, faço saber aos que o presente Alvará virem: que desejando promover e adiantar a riqueza nacional, e sendo um dos mananciais dela as manufaturas e a indústria, sou servido abolir e revogar toda e qualquer proibição que haja a este respeito no Estado do Brasil”. O projeto industrializante de D. João, conforme expresso no alvará, não se concretizou. Que características desse período explicam esse fato?',
             answers: [
-                {text: "Guerra do Paraguai", correct: false},
-                {text: "Guerra do Pacífico", correct: false},
-                {text: "Guerra da Cisplatina", correct: true},
-                {text: "Guerra do Prata", correct: false},
+                {text: "A ocupação de Portugal pelas tropas francesas e o fechamento das manufaturas portuguesas.", correct: false},
+                {text: "A dependência portuguesa da Inglaterra e o predomínio industrial inglês sobre suas redes de comércio.", correct: true},
+                {text: "A desconfiança da burguesia industrial colonial diante da chegada da família real portuguesa.", correct: false},
+                {text: "O confronto entre a França e a Inglaterra e a posição dúbia assumida por Portugal no comércio internacional.", correct: false},
             ] 
         },
         {
-            question: "Qual foi a rebelião de caráter separatista que aconteceu no Nordeste brasileiro durante o Primeiro Reinado?",
+            question: "UVA (2015) A Independência do Brasil, no dia 07 de setembro de 1822, representou na realidade:",
             answers: [
-                {text: "Revolução Pernambucana", correct: false},
-                {text: "Confederação do Equador", correct: true},
-                {text: "Revolução Praieira", correct: false},
-                {text: "Guerra dos Mascates", correct: false},
+                {text: "A quebra da autoridade da metrópole, apenas no setor jurídico-administrativo.", correct: false},
+                {text: "A ruptura total da interferência inglesa nos assuntos econômicos brasileiros.", correct: false},
+                {text: "Um ato político-administrativo e não uma ruptura com o passado colonial.", correct: true},
+                {text: "A vitória dos grupos maçônicos interessados na criação de um império de província autônoma.", correct: false},
             ] 
         },
         {
-            question: "O que aconteceu após a abdicação de Dom Pedro I?",
+            question: "UNESP (2010/adaptado) A Independência do Brasil do domínio português significou o rompimento com:",
             answers: [
-                {text: "Foi iniciado o Período Regencial, até o herdeiro completar 18 anos.", correct: true},
-                {text: "Dom Pedro II foi coroado imperador.", correct: false},
-                {text: "A república foi proclamada.", correct: false},
-                {text: "A filha mais velha de Dom Pedro I assumiu o trono.", correct: false},
+                {text: "A economia europeia, sustentada pela exploração econômica dos países periféricos.", correct: false},
+                {text: "O padrão da economia colonial, baseado na exportação de produtos primários.", correct: false},
+                {text: "O liberalismo econômico e a adoção da política metalista ou mercantilista.", correct: false},
+                {text: "O sistema exclusivo metropolitano, orientado pela política mercantilista.", correct: true},
             ] 
         },
         {
-            question: "IFBC (2021) As revoltas no Brasil Império se caracterizaram em sua maioria como separatistas. Assinale a alternativa que apresenta a qual contexto esse caráter estava ligado.",
+            question: "FAMERP (2020/adptado) Na independência brasileira, uma ruptura e uma continuidade podem ser exemplificadas, respectivamente:",
             answers: [
-                {text: "O conservadorismo monárquico absolutista estava em voga no período.", correct: true},
-                {text: "O Antigo Regime ainda era a política dominante nas grandes nações europeias, especialmente na Inglaterra.", correct: false},
-                {text: "O Antigo Regime entrou em crise devido ao avanço das relações comerciais burguesas.", correct: false},
-                {text: "A Revolução Industrial já estava em sua 3ª fase nesse período histórico.", correct: false},
+                {text: "Pelo esforço de unificação nacional e pelo respeito aos direitos trabalhistas.", correct: false},
+                {text: "Pelo afastamento da Grã-Bretanha e pela aproximação com os Estados Unidos.", correct: false},
+                {text: "Pela fragmentação política do território e pela hegemonia política das elites rurais.", correct: false},
+                {text: "Pelo rompimento em relação ao império português e pela preservação da escravidão.", correct: true},
             ] 
-        }
+        },
     ];
 
     const questionElement = document.getElementById("question");

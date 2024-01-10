@@ -6,6 +6,7 @@
     <title>Quiz Segundo Reinado</title>
 </head>
 <style>
+    @import url(https://fonts.googleapis.com/css2?family=Sofia&display=swap);
     body {
         background: #FFF3D9;
         font-family:'Courier New', Courier, monospace;
@@ -29,6 +30,7 @@
         font-weight: 600px;
         border-bottom: 1px solid #333;
         padding-bottom: 30px;
+        font-family: 'Sofia','cursive';
     }
 
     #question {
@@ -101,10 +103,59 @@
         margin-left: 40px;
         margin-top: 10px;
     }
+
+    #linkindex {
+        font-size: 20px;
+        color: #FFF3D9;
+        font-family: Arial, Helvetica, sans-serif;
+        margin-left: 45%;
+    }
+
+    #voltar {
+        font-size: 20px;
+        color: #FFF3D9;
+        font-family: Arial, Helvetica, sans-serif;
+        margin-left: 5%;
+    }
+    @media screen and (max-width: 1100px) {
+        #logo{
+            width: 230px;
+            height: 80px;
+            margin-left: 20px;
+            margin-top: 20px;
+            }
+
+        #linkindex {
+            font-size: 13px;
+            color: #FFF3D9;
+            font-family: Arial, Helvetica, sans-serif;
+            margin-left: 40%;
+            }
+
+        #voltar {
+            font-size: 13px;
+            color: #FFF3D9;
+            font-family: Arial, Helvetica, sans-serif;
+            margin-left: 2%;
+            }       
+
+        .app {
+            background: #fff;
+            width: 80%;
+            max-width: 800px;
+            border-radius: 10px;
+            padding: 30px;
+            overflow: hidden;
+            margin: auto;
+            display: block;
+            } 
+    }
 </style>
 <body>
     <div class="cabecalho">
         <img src="imagenstcc/logo.png" id="logo">
+        <a href="index.html" id="linkindex">Página Inicial</a>
+        <a href="brasilcolonial.html" id="voltar">Voltar ao Conteúdo</a>
     </div>
     <p></p>
     <div class="app">

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quiz Primeiro Reinado</title>
+    <title>Quiz República Velha</title>
 </head>
 <style>
     @import url(https://fonts.googleapis.com/css2?family=Sofia&display=swap);
@@ -117,6 +117,7 @@
         font-family: Arial, Helvetica, sans-serif;
         margin-left: 5%;
     }
+
     @media screen and (max-width: 1100px) {
         #logo{
             width: 230px;
@@ -159,7 +160,7 @@
     </div>
     <p></p>
     <div class="app">
-        <h1>Quiz Primeiro Reinado</h1>
+        <h1>Quiz República Velha</h1>
         <div class="quiz">
             <h2 id="question">Questão Aqui</h2>
             <div id="botoes-perguntas">
@@ -175,57 +176,57 @@
 <script>
         const questions = [
         {
-            question: "Quais datas, respectivamente, delimitam o início e encerramento do Primeiro Reinado?",
+            question: "A República Velha (1894-1930) foi caracterizada por:",
             answers: [
-                {text: "1 de Setembro de 1822 e 1 de Abril de 1831", correct: false},
-                {text: "7 de Setembro de 1822 e 7 de Abril de 1831", correct: true},
-                {text: "1 de Abril de 1831 e 1 de Setembro de 1822", correct: false},
-                {text: "7 de Abril de 1831 e 7 de Setembro de 1822", correct: false},
+                {text: "Por um período de paz completa em todo território nacional.", correct: false},
+                {text: "Pela alternância de poder entre os partidos estaduais realizado pelo sufrágio universal masculino.", correct: false},
+                {text: "Por uma ascensão social dos libertos pela lei de 13 de maio de 1888.", correct: false},
+                {text: "Pela dominação das elites agrárias estaduais, especialmente as de São Paulo e Minas Gerais.", correct: true},
+            ] 
+        },
+        {
+            question: 'ENEM (2019/adaptado) "A Revolta da Vacina (1904) mostrou claramente o aspecto defensivo, desorganizado, fragmentado da ação popular. Não se negava o Estado, não se reivindicava participação nas decisões políticas; defendiam-se valores e direitos considerados acima da intervenção do Estado." A mobilização analisada representou um alerta, na medida em que a ação popular questionava:',
+            answers: [
+                {text: "A alta de preços.", correct: false},
+                {text: "A política clientelista.", correct: false},
+                {text: "As reformas urbanas.", correct: false},
+                {text: "O arbítrio governamental.", correct: true},
             ]
         },
         {
-            question: "A primeira Constituição Brasileira foi outorgada em que ano?",
+            question: "O estopim que deu início à Revolta Armada, que levou ao fim da Primeira República, foi:",
             answers: [
-                {text: "1821", correct: false},
-                {text: "1822", correct: false},
-                {text: "1823", correct: false},
-                {text: "1824", correct: true},
+                {text: "A derrota do movimento tenentista em São Paulo.", correct: false},
+                {text: "A derrota de Getúlio Vargas", correct: false},
+                {text: "O assassinato de João Pessoa.", correct: true},
+                {text: "o retorno da Coluna Prestes.", correct: false},
             ] 
         },
         {
-            question: "O primeiro grande conflito internacional do qual o Brasil participou depois de sua independência foi:",
+            question: "A violência contra os pobres, o racismo e os castigos físicos foram fatores que deram início à:",
             answers: [
-                {text: "Guerra do Paraguai", correct: false},
-                {text: "Guerra do Pacífico", correct: false},
-                {text: "Guerra da Cisplatina", correct: true},
-                {text: "Guerra do Prata", correct: false},
+                {text: "Revolta da Chibata", correct: true},
+                {text: "Guerra do Contestado", correct: false},
+                {text: "Guerra de Canudos", correct: false},
+                {text: "Revolta Paulista de 1924", correct: false},
             ] 
         },
         {
-            question: "Qual foi a rebelião de caráter separatista que aconteceu no Nordeste brasileiro durante o Primeiro Reinado?",
+            question: "A conhecida política do café com leite era uma política de revezamento do candidato à presidência de acordo com as oligarquias de dois estados brasileiros. Esses estados eram:",
             answers: [
-                {text: "Revolução Pernambucana", correct: false},
-                {text: "Confederação do Equador", correct: true},
-                {text: "Revolução Praieira", correct: false},
-                {text: "Guerra dos Mascates", correct: false},
+                {text: "Rio de Janeiro e São Paulo", correct: false},
+                {text: "Minas Gerais e São Paulo", correct: true},
+                {text: "Rio Grande do sul e Rio de Janeiro", correct: false},
+                {text: "Minas Gerais e Rio Grande do Sul", correct: false},
             ] 
         },
         {
-            question: "O que aconteceu após a abdicação de Dom Pedro I?",
+            question: 'ENEM (2017/adaptado) "Rodrigo havia sido indicado pela oposição para fiscal duma das mesas eleitorais. Pôs o revólver na cintura, uma caixa de balas no bolso e encaminhou-se para seu posto. A chamada dos eleitores começou às sete da manhã. Plantados junto da porta, os capangas do Trindade ofereciam cédulas com o nome dos candidatos oficiais a todos os eleitores que entravam. Estes, em sua quase totalidade, tomavam docilmente dos papeluchos e depositavam-nos na urna, depois de assinar a autêntica. Os que se recusavam a isso tinham seus nomes acintosamente anotados." O trecho mencionado de uma das obras de Erico Veríssimo tematiza o seguinte aspecto característico da vida política durante a Primeira República:',
             answers: [
-                {text: "Foi iniciado o Período Regencial, até o herdeiro completar 18 anos.", correct: true},
-                {text: "Dom Pedro II foi coroado imperador.", correct: false},
-                {text: "A república foi proclamada.", correct: false},
-                {text: "A filha mais velha de Dom Pedro I assumiu o trono.", correct: false},
-            ] 
-        },
-        {
-            question: "IFBC (2021) As revoltas no Brasil Império se caracterizaram em sua maioria como separatistas. Assinale a alternativa que apresenta a qual contexto esse caráter estava ligado.",
-            answers: [
-                {text: "O conservadorismo monárquico absolutista estava em voga no período.", correct: true},
-                {text: "O Antigo Regime ainda era a política dominante nas grandes nações europeias, especialmente na Inglaterra.", correct: false},
-                {text: "O Antigo Regime entrou em crise devido ao avanço das relações comerciais burguesas.", correct: false},
-                {text: "A Revolução Industrial já estava em sua 3ª fase nesse período histórico.", correct: false},
+                {text: "Identificação forçada de homens analfabetos.", correct: false},
+                {text: "Monitoramento legal dos pleitos legislativos.", correct: false},
+                {text: "Repressão explícita ao exercício de direito.", correct: true},
+                {text: "Propaganda direcionada à população do campo.", correct: false},
             ] 
         }
     ];

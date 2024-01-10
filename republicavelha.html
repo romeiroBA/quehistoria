@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>República Velha</title>
     <style>
+        @import url(https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Didact+Gothic&display=swap%27);
+        @import url(https://fonts.googleapis.com/css2?family=Sofia&display=swap);
         .cabecalho {
             background-color: #573142;
             height: 120px;
@@ -21,20 +23,10 @@
             display: grid;
             place-items: center;
         }
-        .conteudo{
-            background-color: white;
-            height: 1000px;
-            width: 100%;
-            border-radius: 20px;
-        }
-        #titulo{
-            text-align: center;
-            font-family: Arial, Helvetica, sans-serif;
-        }
         .rodapé {
-        background-color: #573142;
-        height: 250px;
-        width: 100%;
+            background-color: #573142;
+            height: 250px;
+            width: 100%;
         }
         #logorodapé {
             width: 280px;
@@ -57,6 +49,88 @@
             margin-left: 92%;
             margin-top: 20px;
         }
+        .conteudo {
+            font-size: 23px;
+            font-family: 'Didatic Ghotic';
+            margin-left: 70px;
+            margin-right: 70px;
+            text-align: justify;
+            text-indent: 50px;
+            line-height: 30px;
+        }
+        #subtopicos {
+            font-size: 30px;
+            font-family: 'Didatic Ghotic';
+            margin-left: 70px;
+        }
+        .imagens {
+            display: grid;
+            place-items: center;
+        }
+        #titulo{
+            text-align: center;
+            font-family: 'Sofia','cursive';
+            font-size: 50px;
+        }
+        #tamanhoimagem {
+            max-width: 600px;
+            max-height: 400px;
+        }
+        .legenda {
+            font-size: 16px;
+            text-align: center;
+        }
+        @media screen and (max-width: 1100px){
+            #logo{
+            width: 230px;
+            height: 80px;
+            margin-left: 20px;
+            margin-top: 20px;
+            }
+
+        #logorodapé {
+            width: 200px;
+            height: 70px;
+            margin-left: 30px;
+            margin-top: 30px;
+            }
+
+        #logoif {
+            width: 35px;
+            height: 42px;
+            margin-left: 85%;
+            margin-top: 50px;
+            }
+
+        #descricao {
+            width: 200px;
+            height: 30px;
+            text-align: justify;
+            margin-left: 32px;
+            margin-top: -10px;
+            font-size: 14px;
+            color: white;
+            }
+        #tamanhoimagem {
+            max-width: 300px;
+            max-height: 200px;
+        }
+        #titulo {
+            font-size: 40px;
+        }
+        .conteudo {
+            margin-left: 30px;
+            margin-right: 30px;
+        }
+        #subtopicos {
+            margin-right: 30px;
+            font-size: 28px;
+            margin-left: 30px;
+        }
+        .legenda {
+            font-size: 10px;
+        }
+        }
     </style>
 </head>
 <body id="body">
@@ -64,8 +138,9 @@
         <img src="imagenstcc/logo.png" id="logo">
     </div>
     <p></p>
-    <div class="conteudo">
+    <div>
         <h1 id="titulo">República Velha</h1>
+        
     </div>
     <p></p>
     <div class="rodapé">
