@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Era Vargas</title>
+</head>
+<style>
+    @import url(https://fonts.googleapis.com/css2?family=Sofia&display=swap);
+    body {
+        background: #FFF3D9;
+        font-family:'Courier New', Courier, monospace;
+        box-sizing: border-box;
+    }
+
+    .app {
+        background: #fff;
+        width: 90%;
+        max-width: 800px;
+        border-radius: 10px;
+        padding: 30px;
+        overflow: hidden;
+        margin: auto;
+        display: block;
+    }
+
+    .app h1 {
+        font-size: 25px;
+        color: black;
+        font-weight: 600px;
+        border-bottom: 1px solid #333;
+        padding-bottom: 30px;
+        font-family: 'Sofia','cursive';
+    }
+
+    #question {
+        text-align: justify;
+    }
+
+    .quiz {
+        padding: 20px 0;
+    }
+
+    .quiz h2 {
+        font-size: 18px;
+        color: black;
+        font-weight: 600px;
+    }
+
+    .btn {
+        background: #fff;
+        color: #222;
+        font-weight: 500px;
+        width: 100%;
+        border: 1px solid #222;
+        padding: 10px;
+        margin: 10px;
+        text-align: left;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: all 0.3s;
+    }
+
+    .btn:hover:not([disabled]) {
+        background: #222;
+        color: #fff;
+    }
+
+    .btn:disabled{
+        cursor: no-drop;
+    }
+
+    #next-btn {
+        background: #573142;
+        color: #fff;
+        font-weight: 500px;
+        width: 150px;
+        border: 0;
+        padding: 10px;
+        margin: 20px auto 0;
+        border-radius: 4px;
+        cursor: pointer;
+        display: none;
+    }
+
+    .correct {
+        background: #9aeabc;
+    }
+
+    .incorrect {
+        background: #ff9393;
+    }
+
+    .cabecalho {
+        background-color: #573142;
+        height: 120px;
+        width: 100%; 
+    }
+
+    #logo{
+        width: 250px;
+        height: 100px;
+        margin-left: 40px;
+        margin-top: 10px;
+    }
+
+    #linkindex {
+        font-size: 20px;
+        color: #FFF3D9;
+        font-family: Arial, Helvetica, sans-serif;
+        margin-left: 45%;
+    }
+
+    #voltar {
+        font-size: 20px;
+        color: #FFF3D9;
+        font-family: Arial, Helvetica, sans-serif;
+        margin-left: 5%;
+    }
+    @media screen and (max-width: 1100px) {
+        #logo{
+            width: 230px;
+            height: 80px;
+            margin-left: 20px;
+            margin-top: 20px;
+            }
+
+        #linkindex {
+            font-size: 13px;
+            color: #FFF3D9;
+            font-family: Arial, Helvetica, sans-serif;
+            margin-left: 40%;
+            }
+
+        #voltar {
+            font-size: 13px;
+            color: #FFF3D9;
+            font-family: Arial, Helvetica, sans-serif;
+            margin-left: 2%;
+            }       
+
+        .app {
+            background: #fff;
+            width: 80%;
+            max-width: 800px;
+            border-radius: 10px;
+            padding: 30px;
+            overflow: hidden;
+            margin: auto;
+            display: block;
+            } 
+    }
+</style>
+<body>
+    <div class="cabecalho">
+        <img src="imagenstcc/logo.png" id="logo">
+        <a href="index.html" id="linkindex">Página Inicial</a>
+        <a href="eravargas.html" id="voltar">Voltar ao Conteúdo</a>
+    </div>
+    <p></p>
+    <div class="app">
+        <h1>Quiz Era Vargas</h1>
+        <div class="quiz">
+            <h2 id="question">Questão Aqui</h2>
+            <div id="botoes-perguntas">
+                <button class="btn">Alternativa 1</button>
+                <button class="btn">Alternativa 2</button>
+                <button class="btn">Alternativa 3</button>
+                <button class="btn">Alternativa 4</button>
+            </div>
+            <button id="next-btn">Next</button>
+        </div>
+    </div>
+</body>
+<script>
+        const questions = [
+        {
+            question: 'ENEM (2017/adaptado) "Nos primeiros anos do governo Vargas, as organizações operárias sob controle das correntes de esquerda tentaram se opor ao seu enquadramento pelo Estado. Mas a tentativa fracassou. Além do governo, a própria base dessas organizações pressionou pela legalização. Vários benefícios, como as férias e a possibilidade de postular direitos perante às Juntas de Conciliação e Julgamento, dependiam da condição de ser membro de sindicato reconhecido pelo governo." No contexto histórico retratado pleo texto, a relação entre governo e movimento sindical foi caracterizada:',
+            answers: [
+                {text: "Pelo reconhecimento de diferentes ideologias políticas.", correct: false},
+                {text: "Por um diálogo democraticamente constituído.", correct: false},
+                {text: "Pelas benesses sociais do getulismo.", correct: false},
+                {text: "Pela vinculação de direitos trabalhistas à tutela do Estado.", correct: true},
+            ]
+        },
+        {
+            question: 'Em 10 de novembro de 1937, Getúlio Vargas se dirigiu à população através do rádio: "A disputa presidencial estava levando o país à desordem. Os comunistas infiltravam-se dia a dia nas instituições nacionais. A Nação corria perigo de uma luta de classes e os partidos políticos inquietavam o nosso povo". Este discurso inaugura o período chamado:',
+            answers: [
+                {text: "Estado Novo", correct: true},
+                {text: "República Nova", correct: false},
+                {text: "Era Vargas", correct: false},
+                {text: "Revolução de 30", correct: false},
+            ] 
+        },
+        {
+            question: 'ENEM (2017/adaptado) "Durante o Estado Novo, os encarregados da propaganda procuraram aperfeiçoar-se na arte da empolgação e envolvimento das “multidões” através das mensagens políticas. Nesse tipo de discurso, o significado das palavras importa pouco, pois, como declarou Goebbels, “não falamos para dizer alguma coisa, mas para obter determinado efeito”." O controle sobre os meios de comunicação foi uma marca do Estado Novo, sendo fundamental à propaganda política, na medida em que visava:',
+            answers: [
+                {text: "Conquistar o apoio popular na legitimação do novo governo.", correct: true},
+                {text: "Ampliar o envolvimento das multidões nas decisões políticas.", correct: false},
+                {text: "Aumentar a oferta de informações públicas para a sociedade civil.", correct: false},
+                {text: "Estender a participação democrática dos meios de comunicação no Brasil.", correct: false},
+            ] 
+        },
+        {
+            question: 'UNIRIO (2000/adaptado) Na casa do beato Pedro Batista em Santa Brígida, na Bahia, D. Pedro II divide um espaço na parede com Getúlio Vargas. Este exemplo caracteriza um tipo de idealização da figura de mitos que ficaram sedimentados na memória popular. Podemos afirmar que Getúlio Vargas potencializou uma imagem de "pai dos pobres", em grande parte devido às(aos):',
+            answers: [
+                {text: "Medidas de caráter populista, atraindo as massas trabalhadoras.", correct: true},
+                {text: "Medidas revolucionárias introduzidas com a reforma agrária.", correct: false},
+                {text: "Restrições econômicas impostas aos industriais brasileiros.", correct: false},
+                {text: "Restrições rígidas impostas à burguesia nacional e internacional.", correct: false},
+            ] 
+        },
+        {
+            question: 'Como foi denominado o movimento espontâneo que surgiu em 1945 exigindo a permanência de Vargas na presidência do Brasil?',
+            answers: [
+                {text: "Movimento Varguista", correct: false},
+                {text: "Movimento da Preservação Nacional", correct: false},
+                {text: "Movimento Queremista", correct: true},
+                {text: "Movimento Comunista", correct: false},
+            ] 
+        },
+        {
+            question: 'Uma mudança de estratégia política de Vargas aconteceu entre 1942 e 1943 e deu origem a uma nova forma de fazer política no Brasil. Com isso, Vargas passou a priorizar:',
+            answers: [
+                {text: "A burguesia", correct: false},
+                {text: "Os trabalhadores", correct: true},
+                {text: "Os interesses estrangeiros", correct: false},
+                {text: "Os socialistas", correct: false},
+            ] 
+        },
+    ];
+
+    const questionElement = document.getElementById("question");
+    const answerButtons = document.getElementById("botoes-perguntas");
+    const nextButton = document.getElementById("next-btn");
+
+    let currentQuestionIndex = 0;
+    let score = 0;
+
+
+    function startQuiz(){
+        currentQuestionIndex = 0;
+        score = 0;
+        nextButton.innerHTML = "PRÓXIMA";
+        showQuestion();
+    }
+
+    function showQuestion(){
+        resetState();
+        let currentQuestion = questions[currentQuestionIndex];
+        let questionNo = currentQuestionIndex + 1;
+        questionElement.innerHTML = questionNo + ". " + currentQuestion.
+        question;
+
+        currentQuestion.answers.forEach(answer => {
+            const button = document.createElement("button");
+            button.innerHTML = answer.text;
+            button.classList.add("btn");
+            answerButtons.appendChild(button);
+            if(answer.correct){
+                button.dataset.correct = answer.correct;
+            }
+            button.addEventListener("click", selectAnswer);
+        });
+    }
+
+    function resetState(){
+        nextButton.style.display = "none";
+        while(answerButtons.firstChild){
+            answerButtons.removeChild(answerButtons.firstChild);
+        }
+    }
+
+    function selectAnswer(e){
+        const selectedBtn = e.target;
+        const isCorrect = selectedBtn.dataset.correct === "true";
+        if(isCorrect){
+            selectedBtn.classList.add("correct");
+            score++;
+        } else {
+            selectedBtn.classList.add("incorrect")
+        }
+        Array.from(answerButtons.children).forEach(button => {
+            if(button.dataset.correct === "true"){
+                button.classList.add("correct");
+            }
+            button.disabled = true;
+        });
+        nextButton.style.display = "block";
+    }
+
+    function showScore(){
+        resetState();
+        questionElement.innerHTML = `Você acertou ${score} de ${questions.length}!`;
+        nextButton.innerHTML = "Tentar Novamente";
+        nextButton.style.display = "block";
+    }
+
+    function handleNextButton(){
+        currentQuestionIndex++;
+        if(currentQuestionIndex < questions.length){
+            showQuestion();
+        } else {
+            showScore();
+        }
+    }
+
+    nextButton.addEventListener("click", ()=>{
+        if(currentQuestionIndex < questions.length){
+            handleNextButton();
+        } else {
+            startQuiz();
+        }
+    });
+
+    startQuiz();
+</script>
+</html>
