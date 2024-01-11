@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quiz Grécia Antiga</title>
+    <title>Quiz Roma Antiga</title>
 </head>
 <style>
     @import url(https://fonts.googleapis.com/css2?family=Sofia&display=swap);
@@ -71,7 +71,7 @@
     }
 
     #next-btn {
-        background: #573142;
+        background:#573142;
         color: #fff;
         font-weight: 500px;
         width: 150px;
@@ -103,6 +103,7 @@
         margin-left: 40px;
         margin-top: 10px;
     }
+
     #linkindex {
         font-size: 20px;
         color: #FFF3D9;
@@ -155,11 +156,11 @@
     <div class="cabecalho">
         <img src="imagenstcc/logo.png" id="logo">
         <a href="index.html" id="linkindex">Página Inicial</a>
-        <a href="greciaantiga.html" id="voltar">Voltar ao Conteúdo</a>
+        <a href="romaantiga.html" id="voltar">Voltar ao Conteúdo</a>
     </div>
     <p></p>
     <div class="app">
-        <h1>Quiz Grécia Antiga</h1>
+        <h1>Quiz Roma Antiga</h1>
         <div class="quiz">
             <h2 id="question">Questão Aqui</h2>
             <div id="botoes-perguntas">
@@ -175,59 +176,59 @@
 <script>
         const questions = [
         {
-            question: "Qual era a religião da antiga Grécia?",
-            answers: [
-                {text: "Cristã", correct: false},
-                {text: "Judaica", correct: false},
-                {text: "Politeísta", correct: true},
-                {text: "Islâmica", correct: false},
-            ] 
-        },
-        {
-            question: "A Guerra do Peloponeso foi uma guerra civil que ocorreu na Grécia Antiga entre 431 e 404 a.C. Esse conflito militar durou 27 anos e terminou com a vitória de:",
-            answers: [
-                {text: "Tebas", correct: false},
-                {text: "Esparta", correct: true},
-                {text: "Atenas", correct: false},
-                {text: "Creta", correct: false},
-            ]
-        },
-        {
-            question: 'MACKENZIE (adaptado) "Conta a história que, com a ajuda de Atena, Epeu construiu um grande cavalo de madeira, onde escondeu guerreiros. Ulisses ardilosamente introduziu-o em Troia para que os guerreiros a saqueassem." Em sua obra, o autor transformou a luta pelo controle do estreito de Dardanelos (Helesponto) num conflito envolvendo deuses e heróis. A obra e o respectivo autor são: ',
-            answers: [
-                {text: "A República - Platão", correct: false},
-                {text: "Édipo Rei - Sófocles", correct: false},
-                {text: "A Ilíada - Homero", correct: true},
-                {text: "Os Sete Contra Tebas - Ésquilo", correct: false},
-            ] 
-        },
-        {
-            question: "QUADRIX (2021/adaptado) Criada na Antiguidade grega, foi reintroduzida na civilização contemporânea com o novo significado imposto pela passagem do tempo. Realizada a cada quatro anos, sua última edição, em 2021, teve como sede a capital japonesa, Tóquio. Trata-se da:",
-            answers: [
-                {text: "Copa do Mundo de Futebol", correct: false},
-                {text: "Copa das Confederações", correct: false},
-                {text: "Olimpíada", correct: true},
-                {text: "Liga dos Campeões", correct: false},
-            ] 
-        },
-        {
-            question: "Qual foi a cidade grega atingida por uma epidemia exatamente no momento em que acontecia a Guerra do Peloponeso?",
+            question: "FAU (2019/adaptado) A consolidação do poder romano sobre o mar Mediterrâneo se deu a partir dos conflitos conhecidos como Guerras Púnicas. Qual cidade foi o principal núcleo de rivalidade com a Roma Antiga naquele conflito?",
             answers: [
                 {text: "Esparta", correct: false},
-                {text: "Corinto", correct: false},
-                {text: "Atenas", correct: true},
-                {text: "Argos", correct: false},
+                {text: "Tiro", correct: false},
+                {text: "Babilônia", correct: true},
+                {text: "Cartago", correct: false},
             ] 
         },
         {
-            question: "As Guerras Médicas foram um conflito dos gregos contra:",
+            question: "Segundo a lenda tradicional de Roma, a história da fundação da cidade está ligada a dois irmãos chamados:",
             answers: [
-                {text: "Elamitas", correct: false},
-                {text: "Assírios", correct: false},
-                {text: "Hititas", correct: false},
-                {text: "Persas", correct: true},
+                {text: "Tibério e Caio", correct: false},
+                {text: "Marco e Augusto", correct: false},
+                {text: "Rômulo e Remo", correct: true},
+                {text: "Otávio e Júlio César", correct: false},
             ] 
         },
+        {
+            question: "Cronologicamente, correspondem às três fases de Roma Antiga:",
+            answers: [
+                {text: "Império - República - Monarquia", correct: false},
+                {text: "Monarquia - Império - República", correct: false},
+                {text: "Monarquia - República - Parlamento", correct: false},
+                {text: "Monarquia - República - Império", correct: true},
+            ] 
+        },
+        {
+            question: "INEP (2017/adaptado) Os tribunos da plebe e irmãos Tibério e Caio Graco.",
+            answers: [
+                {text: "Foram os conquistadores de Cartago.", correct: false},
+                {text: "Defenderam os camponeses sem-terra contra a aristocracia.", correct: true},
+                {text: "Eram os primeiros líderes do partido democrático.", correct: false},
+                {text: "Elaboraram a primeira lei escrita de Roma.", correct: false},
+            ] 
+        },
+        {
+            question: "Com a crise da República e o início do período imperial, quem assumiu o poder em Roma foi:",
+            answers: [
+                {text: "Júlio César", correct: false},
+                {text: "Marco Antônio", correct: false},
+                {text: "Otávio Augusto", correct: true},
+                {text: "Mario Henrique", correct: false},
+            ] 
+        },
+        {
+            question: 'ENEM (2016/adaptado) "A Lei das Doze Tábuas, de meados do Século V a.C., fixou por escrito um velho direito costumeiro. No relativo às dívidas não pagas, o código permitia, em última análise, matar o devedor; ou vendê-lo como escravo “do outro lado do Tibre” — isto é, fora do território de Roma." A referida lei foi um marco na luta por direitos na Roma Antiga, pois possibilitou que os plebeus:',
+            answers: [
+                {text: "Modificassem a estrutura agrária assentada no latifúndio.", correct: false},
+                {text: "Exercessem a prática da escravidão sobre seus devedores.", correct: false},
+                {text: "Cconquistassem a possibilidade de casamento com os patrícios.", correct: false},
+                {text: "Reinvindicassem as mudanças sociais com base no conhecimento das leis.", correct: true},
+            ] 
+        }
     ];
 
     const questionElement = document.getElementById("question");
