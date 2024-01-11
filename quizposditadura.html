@@ -6,6 +6,7 @@
     <title>Quiz Pós Ditadura</title>
 </head>
 <style>
+    @import url(https://fonts.googleapis.com/css2?family=Sofia&display=swap);
     body {
         background: #FFF3D9;
         font-family:'Courier New', Courier, monospace;
@@ -29,6 +30,7 @@
         font-weight: 600px;
         border-bottom: 1px solid #333;
         padding-bottom: 30px;
+        font-family: 'Sofia','cursive';
     }
 
     #question {
@@ -69,7 +71,7 @@
     }
 
     #next-btn {
-        background: #001e4d;
+        background:#573142;
         color: #fff;
         font-weight: 500px;
         width: 150px;
@@ -101,10 +103,60 @@
         margin-left: 40px;
         margin-top: 10px;
     }
+
+    #linkindex {
+        font-size: 20px;
+        color: #FFF3D9;
+        font-family: Arial, Helvetica, sans-serif;
+        margin-left: 45%;
+    }
+
+    #voltar {
+        font-size: 20px;
+        color: #FFF3D9;
+        font-family: Arial, Helvetica, sans-serif;
+        margin-left: 5%;
+    }
+
+    @media screen and (max-width: 1100px) {
+        #logo{
+            width: 230px;
+            height: 80px;
+            margin-left: 20px;
+            margin-top: 20px;
+            }
+
+        #linkindex {
+            font-size: 13px;
+            color: #FFF3D9;
+            font-family: Arial, Helvetica, sans-serif;
+            margin-left: 40%;
+            }
+
+        #voltar {
+            font-size: 13px;
+            color: #FFF3D9;
+            font-family: Arial, Helvetica, sans-serif;
+            margin-left: 2%;
+            }       
+
+        .app {
+            background: #fff;
+            width: 80%;
+            max-width: 800px;
+            border-radius: 10px;
+            padding: 30px;
+            overflow: hidden;
+            margin: auto;
+            display: block;
+            } 
+    }
 </style>
 <body>
     <div class="cabecalho">
         <img src="imagenstcc/logo.png" id="logo">
+        <a href="index.html" id="linkindex">Página Inicial</a>
+        <a href="posditadura.html" id="voltar">Voltar ao Conteúdo</a>
     </div>
     <p></p>
     <div class="app">
@@ -124,57 +176,57 @@
 <script>
         const questions = [
         {
+            question: "NC-UFPR (2015/adaptado) Sobre a redemocratização no Brasil pós - ditadura, assinale a alternativa correta.",
+            answers: [
+                {text: 'Uma das ações que marcou o processo de redemocratização foi a campanha pelas eleições diretas para a presidência da República, que ficou conhecida como “Diretas já".', correct: true},
+                {text: "O bipartidarismo foi uma das marcas do período pós-ditadura, motivo pelo qual a ARENA e o MDB foram os únicos partidos políticos autorizados a funcionar no período", correct: false},
+                {text: "O presidente Tancredo Neves foi o primeiro presidente eleito pelo voto popular após a ditadura militar.", correct: false},
+                {text: "Devido às graves denúncias que ocorreram, o presidente José Sarney foi afastado da presidência da República. Esse processo ficou conhecido como impeachment.", correct: false},
+            ] 
+        },
+        {
             question: 'FURG (2006/adaptado) A Campanha das "Diretas-Já" foi um episódio marcante ocorrido na década de 1980, constituindo um dos significativos momentos do processo histórico brasileiro conhecido como:',
             answers: [
-                {text: "republicanização", correct: false},
-                {text: "coligação", correct: false},
-                {text: "redemocratização", correct: true},
-                {text: "conciliação", correct: false},
+                {text: "Republicanização", correct: false},
+                {text: "Coligação", correct: false},
+                {text: "Redemocratização", correct: true},
+                {text: "Conciliação", correct: false},
             ]
         },
         {
-            question: "",
+            question: "Qual foi a constituição promulgada dpurante o governo de José Sarney que estabeleceu os princípios democráticos e os direitos fundamentais e continua sendo utilizada até os dias de hoje?",
             answers: [
-                {text: "", correct: false},
-                {text: "", correct: true},
-                {text: "", correct: false},
-                {text: "", correct: false},
+                {text: "Constituição de 1946", correct: false},
+                {text: "Constituição de 1967", correct: false},
+                {text: "Constituição de 1985", correct: false},
+                {text: "Constituição de 1988", correct: true},
             ] 
         },
         {
-            question: "",
+            question: "O Plano Real lançado em 1994, com o objetivo de controlar a hiperinflação que assolava o país, corroendo os salários e minando a confiança na moeda nacional, foi colocado em prática no governo de qual presidente?",
             answers: [
-                {text: "", correct: false},
-                {text: "", correct: false},
-                {text: "", correct: true},
-                {text: "", correct: false},
+                {text: "Fernando Henrique Cardo", correct: false},
+                {text: "Fernando Collor de Mello", correct: false},
+                {text: "Itamar Franco", correct: true},
+                {text: "Luiz Inácio Lula da Silva", correct: false},
             ] 
         },
         {
-            question: "",
+            question: "Quem foi o primeiro presidente do Brasil após o encerramento da ditadura militar?",
             answers: [
-                {text: "", correct: false},
-                {text: "", correct: false},
-                {text: "", correct: true},
-                {text: "", correct: false},
+                {text: "Tancredo Neves", correct: false},
+                {text: "José Sarney", correct: true},
+                {text: "Fernando Henrique Cardoso", correct: false},
+                {text: "Fernando Collor de Mello", correct: false},
             ] 
         },
         {
-            question: "",
+            question: "Quem foi o primeiro presidente eleito diretamente após o período ditatorial?",
             answers: [
-                {text: "", correct: false},
-                {text: "", correct: false},
-                {text: "", correct: true},
-                {text: "", correct: false},
-            ] 
-        },
-        {
-            question: "",
-            answers: [
-                {text: "", correct: false},
-                {text: "", correct: false},
-                {text: "", correct: false},
-                {text: "", correct: true},
+                {text: "Tancredo Neves", correct: false},
+                {text: "José Sarney", correct: false},
+                {text: "Fernando Henrique Cardoso", correct: false},
+                {text: "Fernando Collor de Mello", correct: true},
             ] 
         },
     ];
