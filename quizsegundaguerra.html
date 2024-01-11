@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Segunda Guerra</title>
+</head>
+<style>
+    @import url(https://fonts.googleapis.com/css2?family=Sofia&display=swap);
+    body {
+        background: #FFF3D9;
+        font-family:'Courier New', Courier, monospace;
+        box-sizing: border-box;
+    }
+
+    .app {
+        background: #fff;
+        width: 90%;
+        max-width: 800px;
+        border-radius: 10px;
+        padding: 30px;
+        overflow: hidden;
+        margin: auto;
+        display: block;
+    }
+
+    .app h1 {
+        font-size: 25px;
+        color: black;
+        font-weight: 600px;
+        border-bottom: 1px solid #333;
+        padding-bottom: 30px;
+        font-family: 'Sofia','cursive';
+    }
+
+    #question {
+        text-align: justify;
+    }
+
+    .quiz {
+        padding: 20px 0;
+    }
+
+    .quiz h2 {
+        font-size: 18px;
+        color: black;
+        font-weight: 600px;
+    }
+
+    .btn {
+        background: #fff;
+        color: #222;
+        font-weight: 500px;
+        width: 100%;
+        border: 1px solid #222;
+        padding: 10px;
+        margin: 10px;
+        text-align: left;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: all 0.3s;
+    }
+
+    .btn:hover:not([disabled]) {
+        background: #222;
+        color: #fff;
+    }
+
+    .btn:disabled{
+        cursor: no-drop;
+    }
+
+    #next-btn {
+        background:#573142;
+        color: #fff;
+        font-weight: 500px;
+        width: 150px;
+        border: 0;
+        padding: 10px;
+        margin: 20px auto 0;
+        border-radius: 4px;
+        cursor: pointer;
+        display: none;
+    }
+
+    .correct {
+        background: #9aeabc;
+    }
+
+    .incorrect {
+        background: #ff9393;
+    }
+
+    .cabecalho {
+        background-color: #573142;
+        height: 120px;
+        width: 100%; 
+    }
+
+    #logo{
+        width: 250px;
+        height: 100px;
+        margin-left: 40px;
+        margin-top: 10px;
+    }
+
+    #linkindex {
+        font-size: 20px;
+        color: #FFF3D9;
+        font-family: Arial, Helvetica, sans-serif;
+        margin-left: 45%;
+    }
+
+    #voltar {
+        font-size: 20px;
+        color: #FFF3D9;
+        font-family: Arial, Helvetica, sans-serif;
+        margin-left: 5%;
+    }
+
+    @media screen and (max-width: 1100px) {
+        #logo{
+            width: 230px;
+            height: 80px;
+            margin-left: 20px;
+            margin-top: 20px;
+            }
+
+        #linkindex {
+            font-size: 13px;
+            color: #FFF3D9;
+            font-family: Arial, Helvetica, sans-serif;
+            margin-left: 40%;
+            }
+
+        #voltar {
+            font-size: 13px;
+            color: #FFF3D9;
+            font-family: Arial, Helvetica, sans-serif;
+            margin-left: 2%;
+            }       
+
+        .app {
+            background: #fff;
+            width: 80%;
+            max-width: 800px;
+            border-radius: 10px;
+            padding: 30px;
+            overflow: hidden;
+            margin: auto;
+            display: block;
+            } 
+    }
+</style>
+<body>
+    <div class="cabecalho">
+        <img src="imagenstcc/logo.png" id="logo">
+        <a href="index.html" id="linkindex">Página Inicial</a>
+        <a href="segundaguerra.html" id="voltar">Voltar ao Conteúdo</a>
+    </div>
+    <p></p>
+    <div class="app">
+        <h1>Quiz Segunda Guerra</h1>
+        <div class="quiz">
+            <h2 id="question">Questão Aqui</h2>
+            <div id="botoes-perguntas">
+                <button class="btn">Alternativa 1</button>
+                <button class="btn">Alternativa 2</button>
+                <button class="btn">Alternativa 3</button>
+                <button class="btn">Alternativa 4</button>
+            </div>
+            <button id="next-btn">Next</button>
+        </div>
+    </div>
+</body>
+<script>
+        const questions = [
+        {
+            question: "UNEMAT (adaptado) - A Segunda Grande Guerra (1939-1945) adquiriu caráter mundial a partir de 7 de dezembro de 1941, quando:",
+            answers: [
+                {text: "Os russos tomaram a iniciativa de anexar os Estados Bálticos.", correct: false},
+                {text: "Os alemães invadiram o litoral mediterrâneo da África.", correct: false},
+                {text: "Os japoneses atacaram a base norte-americana de Pearl Harbor", correct: true},
+                {text: "Os franceses, por determinação do marechal Pétain, ocuparam o Sudeste da Ásia.", correct: false},
+            ] 
+        },
+        {
+            question: 'UFRN (adaptado) - Em relação à Segunda Guerra Mundial é correto afirmar que:',
+            answers: [
+                {text: "Hitler empreendeu uma implacável perseguição aos judeus, que resultou na morte de seis milhões de pessoas.", correct: true},
+                {text: "Os norte-americanos permaneceram neutros na guerra até 1941, quando bombardearam Hiroshima e Nagasaki.", correct: false},
+                {text: "Com o ataque alemão a Pearl Harbor, os norte-americanos resolveram entrar na guerra.", correct: false},
+                {text: "A Crise de 1929 nada teve a ver com a Segunda Guerra Mundial.", correct: false},
+            ]
+        },
+        {
+            question: "A Segunda Guerra Mundial foi caracterizada pelo desenvolvimento da indústria bélica. Sobre este assunto é correto afirmar que:",
+            answers: [
+                {text: "A maior invenção deste conflito foi a bomba atômica lançada em cidades japonesas em agosto de 1945.", correct: false},
+                {text: "Os nazistas conseguiram criar armas como o submarino nuclear e o gás Ziklon-B.", correct: false},
+                {text: "As mesmas estratégias utilizadas na Primeira Guerra foram repetidas na Segunda, como o uso da cavalaria.", correct: true},
+                {text: "A aviação de guerra se restringiu à missões de patrulhamento e reconhecimento.", correct: false},
+            ] 
+        },
+        {
+            question: "CESPE/CEBRASPE (2021/adaptado) Entre 1939 e 1945, aconteceu a Segunda Guerra Mundial, que se tornou o conflito mais violento de todo o século XX. A respeito da Segunda Guerra Mundial, assinale a opção correta.",
+            answers: [
+                {text: "O Brasil não participou dessa guerra.", correct: false},
+                {text: "Essa guerra ficou circunscrita ao continente europeu.", correct: false},
+                {text: "Estados Unidos da América, Inglaterra e ex-União Soviética foram considerados os grandes vencedores dessa guerra.", correct: true},
+                {text: "A França foi aliada da Alemanha nazista.", correct: false},
+            ] 
+        },
+        {
+            question: "Qual foi o estopim que levou os Estados Unidos a entrar na Segunda Guerra Mundial?",
+            answers: [
+                {text: "Rompimento das relações diplomáticas anunciado pela Itália.", correct: false},
+                {text: "Aprisionamento de cidadãos norte-americanos na França por tropas alemãs.", correct: false},
+                {text: "A assinatura do Tratado de Não Agressão entre Alemanha e URSS.", correct: false},
+                {text: "Ataque japonês a Pearl Harbor.", correct: true},
+            ] 
+        },
+        {
+            question: "GSA Concursos (adaptado) Inúmeras foram as guerras realizadas na história da humanidade. Umas curtas, outras longas, umas com poucos mortos, outras com milhões. Com certeza, a maior no quesito mortes foi a Segunda Guerra Mundial. Indique a alternativa que não é considerada uma de suas causas:",
+            answers: [
+                {text: "Tratado de Versalhes.", correct: false},
+                {text: "Corrida Armamentista.", correct: false},
+                {text: "Revanchismo Francês frente à Alemanha.", correct: true},
+                {text: "Imperialismo Italiano.", correct: false},
+            ] 
+        },
+    ];
+
+    const questionElement = document.getElementById("question");
+    const answerButtons = document.getElementById("botoes-perguntas");
+    const nextButton = document.getElementById("next-btn");
+
+    let currentQuestionIndex = 0;
+    let score = 0;
+
+
+    function startQuiz(){
+        currentQuestionIndex = 0;
+        score = 0;
+        nextButton.innerHTML = "PRÓXIMA";
+        showQuestion();
+    }
+
+    function showQuestion(){
+        resetState();
+        let currentQuestion = questions[currentQuestionIndex];
+        let questionNo = currentQuestionIndex + 1;
+        questionElement.innerHTML = questionNo + ". " + currentQuestion.
+        question;
+
+        currentQuestion.answers.forEach(answer => {
+            const button = document.createElement("button");
+            button.innerHTML = answer.text;
+            button.classList.add("btn");
+            answerButtons.appendChild(button);
+            if(answer.correct){
+                button.dataset.correct = answer.correct;
+            }
+            button.addEventListener("click", selectAnswer);
+        });
+    }
+
+    function resetState(){
+        nextButton.style.display = "none";
+        while(answerButtons.firstChild){
+            answerButtons.removeChild(answerButtons.firstChild);
+        }
+    }
+
+    function selectAnswer(e){
+        const selectedBtn = e.target;
+        const isCorrect = selectedBtn.dataset.correct === "true";
+        if(isCorrect){
+            selectedBtn.classList.add("correct");
+            score++;
+        } else {
+            selectedBtn.classList.add("incorrect")
+        }
+        Array.from(answerButtons.children).forEach(button => {
+            if(button.dataset.correct === "true"){
+                button.classList.add("correct");
+            }
+            button.disabled = true;
+        });
+        nextButton.style.display = "block";
+    }
+
+    function showScore(){
+        resetState();
+        questionElement.innerHTML = `Você acertou ${score} de ${questions.length}!`;
+        nextButton.innerHTML = "Tentar Novamente";
+        nextButton.style.display = "block";
+    }
+
+    function handleNextButton(){
+        currentQuestionIndex++;
+        if(currentQuestionIndex < questions.length){
+            showQuestion();
+        } else {
+            showScore();
+        }
+    }
+
+    nextButton.addEventListener("click", ()=>{
+        if(currentQuestionIndex < questions.length){
+            handleNextButton();
+        } else {
+            startQuiz();
+        }
+    });
+
+    startQuiz();
+</script>
+</html>
