@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Primeira Guerra</title>
+</head>
+<style>
+    @import url(https://fonts.googleapis.com/css2?family=Sofia&display=swap);
+    body {
+        background: #FFF3D9;
+        font-family:'Courier New', Courier, monospace;
+        box-sizing: border-box;
+    }
+
+    .app {
+        background: #fff;
+        width: 90%;
+        max-width: 800px;
+        border-radius: 10px;
+        padding: 30px;
+        overflow: hidden;
+        margin: auto;
+        display: block;
+    }
+
+    .app h1 {
+        font-size: 25px;
+        color: black;
+        font-weight: 600px;
+        border-bottom: 1px solid #333;
+        padding-bottom: 30px;
+        font-family: 'Sofia','cursive';
+    }
+
+    #question {
+        text-align: justify;
+    }
+
+    .quiz {
+        padding: 20px 0;
+    }
+
+    .quiz h2 {
+        font-size: 18px;
+        color: black;
+        font-weight: 600px;
+    }
+
+    .btn {
+        background: #fff;
+        color: #222;
+        font-weight: 500px;
+        width: 100%;
+        border: 1px solid #222;
+        padding: 10px;
+        margin: 10px;
+        text-align: left;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: all 0.3s;
+    }
+
+    .btn:hover:not([disabled]) {
+        background: #222;
+        color: #fff;
+    }
+
+    .btn:disabled{
+        cursor: no-drop;
+    }
+
+    #next-btn {
+        background:#573142;
+        color: #fff;
+        font-weight: 500px;
+        width: 150px;
+        border: 0;
+        padding: 10px;
+        margin: 20px auto 0;
+        border-radius: 4px;
+        cursor: pointer;
+        display: none;
+    }
+
+    .correct {
+        background: #9aeabc;
+    }
+
+    .incorrect {
+        background: #ff9393;
+    }
+
+    .cabecalho {
+        background-color: #573142;
+        height: 120px;
+        width: 100%; 
+    }
+
+    #logo{
+        width: 250px;
+        height: 100px;
+        margin-left: 40px;
+        margin-top: 10px;
+    }
+
+    #linkindex {
+        font-size: 20px;
+        color: #FFF3D9;
+        font-family: Arial, Helvetica, sans-serif;
+        margin-left: 45%;
+    }
+
+    #voltar {
+        font-size: 20px;
+        color: #FFF3D9;
+        font-family: Arial, Helvetica, sans-serif;
+        margin-left: 5%;
+    }
+
+    @media screen and (max-width: 1100px) {
+        #logo{
+            width: 230px;
+            height: 80px;
+            margin-left: 20px;
+            margin-top: 20px;
+            }
+
+        #linkindex {
+            font-size: 13px;
+            color: #FFF3D9;
+            font-family: Arial, Helvetica, sans-serif;
+            margin-left: 40%;
+            }
+
+        #voltar {
+            font-size: 13px;
+            color: #FFF3D9;
+            font-family: Arial, Helvetica, sans-serif;
+            margin-left: 2%;
+            }       
+
+        .app {
+            background: #fff;
+            width: 80%;
+            max-width: 800px;
+            border-radius: 10px;
+            padding: 30px;
+            overflow: hidden;
+            margin: auto;
+            display: block;
+            } 
+    }
+</style>
+<body>
+    <div class="cabecalho">
+        <img src="imagenstcc/logo.png" id="logo">
+        <a href="index.html" id="linkindex">Página Inicial</a>
+        <a href="primeiraguerra.html" id="voltar">Voltar ao Conteúdo</a>
+    </div>
+    <p></p>
+    <div class="app">
+        <h1>Quiz Primeira Guerra</h1>
+        <div class="quiz">
+            <h2 id="question">Questão Aqui</h2>
+            <div id="botoes-perguntas">
+                <button class="btn">Alternativa 1</button>
+                <button class="btn">Alternativa 2</button>
+                <button class="btn">Alternativa 3</button>
+                <button class="btn">Alternativa 4</button>
+            </div>
+            <button id="next-btn">Next</button>
+        </div>
+    </div>
+</body>
+<script>
+        const questions = [
+        {
+            question: "A Primeira Guerra se caracterizou pelo uso de várias tecnologias mortíferas no campo de batalha. Dentre as quais podemos destacar:",
+            answers: [
+                {text: "Armas químicas.", correct: true},
+                {text: "O rifle de repetição.", correct: false},
+                {text: "Os navios de guerra.", correct: false},
+                {text: "Armas brancas.", correct: false},
+            ] 
+        },
+        {
+            question: 'IBDADE (2020/adaptado) “Filas de rostos pálidos murmurando, máscaras de medo. Eles deixam as trincheiras, subindo pela borda. Enquanto o tempo bate vazio e apressado nos pulsos, e a esperança, de olhos furtivos e punhos cerrados, naufraga na lama. Ó Jesus, fazei com que isso acabe!” O fragmento citado descreve os horrores causados pela luta de trincheiras travadas durante a Primeira Guerra Mundial. Sobre os desdobramentos econômicos, políticos ou sociais desse conflito global, assinale a alternativa correta.',
+            answers: [
+                {text: "Contribuiu para o nascimento da URSS e para o desmembramento do Império Austro-Húngaro.", correct: true},
+                {text: "Causou o imediato enfraquecimento da economia dos Estados Unidos da América.", correct: false},
+                {text: "Resultou na formação de uma coalizão internacional para combater as revoluções proletárias na Europa.", correct: false},
+                {text: "Fortalecimento da democracia e das práticas econômicas liberais nas nações que saíram derrotadas do conflito.", correct: false},
+            ]
+        },
+        {
+            question: "CESPE/CEBRASPE (2021/adaptado) A Primeira Guerra Mundial foi um conflito de amplas proporções que envolveu os principais países europeus, além de países de outros continentes. A respeito da Primeira Guerra Mundial, assinale a opção correta.",
+            answers: [
+                {text: "Os Estados Unidos da América não participaram dessa guerra.", correct: false},
+                {text: "A Inglaterra foi um dos membros da Tríplice Aliança.", correct: false},
+                {text: "O Império Otomano foi um dos países vitoriosos nessa guerra.", correct: false},
+                {text: "A Alemanha foi responsabilizada por essa guerra.", correct: true},
+            ] 
+        },
+        {
+            question: "AVANÇA-SP (2019/adaptado) Dos fenômenos abaixo citados, assinale aquele que é considerado como o causador da Primeira Guerra Mundial.",
+            answers: [
+                {text: "O assassinato da família imperial russa.", correct: false},
+                {text: "O fim do colonialismo africano.", correct: false},
+                {text: "O assassinato do arquiduque Francisco Ferdinando, herdeiro do trono austríaco.", correct: true},
+                {text: "O descumprimento do Tratado de Versalhes por parte da Alemanha.", correct: false},
+            ] 
+        },
+        {
+            question: "Selecione a alternativa que apresenta uma fase da Primeira Guerra Mundial.",
+            answers: [
+                {text: "Derrota do Eixo", correct: false},
+                {text: "Avanço do Exército Vermelho", correct: false},
+                {text: "Corrida Nuclear", correct: false},
+                {text: "Guerra de Trincheiras", correct: true},
+            ] 
+        },
+        {
+            question: "Logo após a Revolução Russa, os russos negociaram sua saída da guerra por meio do tratado conhecido como:",
+            answers: [
+                {text: "Tratado de Versalhes", correct: false},
+                {text: "Tratado Brest-Litovsk", correct: true},
+                {text: "Tratado Molotov-Ribbentrop", correct: false},
+                {text: "Tratado de Moscou", correct: false},
+            ] 
+        },
+    ];
+
+    const questionElement = document.getElementById("question");
+    const answerButtons = document.getElementById("botoes-perguntas");
+    const nextButton = document.getElementById("next-btn");
+
+    let currentQuestionIndex = 0;
+    let score = 0;
+
+
+    function startQuiz(){
+        currentQuestionIndex = 0;
+        score = 0;
+        nextButton.innerHTML = "PRÓXIMA";
+        showQuestion();
+    }
+
+    function showQuestion(){
+        resetState();
+        let currentQuestion = questions[currentQuestionIndex];
+        let questionNo = currentQuestionIndex + 1;
+        questionElement.innerHTML = questionNo + ". " + currentQuestion.
+        question;
+
+        currentQuestion.answers.forEach(answer => {
+            const button = document.createElement("button");
+            button.innerHTML = answer.text;
+            button.classList.add("btn");
+            answerButtons.appendChild(button);
+            if(answer.correct){
+                button.dataset.correct = answer.correct;
+            }
+            button.addEventListener("click", selectAnswer);
+        });
+    }
+
+    function resetState(){
+        nextButton.style.display = "none";
+        while(answerButtons.firstChild){
+            answerButtons.removeChild(answerButtons.firstChild);
+        }
+    }
+
+    function selectAnswer(e){
+        const selectedBtn = e.target;
+        const isCorrect = selectedBtn.dataset.correct === "true";
+        if(isCorrect){
+            selectedBtn.classList.add("correct");
+            score++;
+        } else {
+            selectedBtn.classList.add("incorrect")
+        }
+        Array.from(answerButtons.children).forEach(button => {
+            if(button.dataset.correct === "true"){
+                button.classList.add("correct");
+            }
+            button.disabled = true;
+        });
+        nextButton.style.display = "block";
+    }
+
+    function showScore(){
+        resetState();
+        questionElement.innerHTML = `Você acertou ${score} de ${questions.length}!`;
+        nextButton.innerHTML = "Tentar Novamente";
+        nextButton.style.display = "block";
+    }
+
+    function handleNextButton(){
+        currentQuestionIndex++;
+        if(currentQuestionIndex < questions.length){
+            showQuestion();
+        } else {
+            showScore();
+        }
+    }
+
+    nextButton.addEventListener("click", ()=>{
+        if(currentQuestionIndex < questions.length){
+            handleNextButton();
+        } else {
+            startQuiz();
+        }
+    });
+
+    startQuiz();
+</script>
+</html>
